@@ -6,6 +6,8 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
+int ONE_KB = 1024;
+
 char *SRC_DIR = "./src/pages";
 char *DIST_DIR = "./dist";
 
@@ -57,17 +59,17 @@ void copyDynamic(
 ) {
     mkdir(dist_dir, 0777);
 
-    int file_name_size = 256;
+    int file_name_size = ONE_KB / 4;
     char file_name[file_name_size];
 
-    int dist_file_name_size = 256;
+    int dist_file_name_size = ONE_KB / 4;
     char dist_file_name[dist_file_name_size];
 
     DIR *src = opendir(dir);
     struct dirent *d_entry;
     while((d_entry = readdir(src)) != NULL) {
         sprintf(file_name, "%s/%s", dir, d_entry->d_name);
-        FILE *file = fopen(file_name, "rw");
+        FILE *file = fopen(file_name, "r");
         if(file == NULL) continue;
 
         sprintf(dist_file_name, "%s/%s", dist_dir, d_entry->d_name);
@@ -81,9 +83,11 @@ void copyDynamic(
             continue;
         }
 
-        FILE *dist_file = fopen(dist_file_name, "ab+");
+        FILE *dist_file = fopen(dist_file_name, "w");
         
-        fread(file_buffer, file_buffer_size, file_buffer_size, file);
+        size_t n = fread(file_buffer, 1, file_buffer_size - 1, file);
+        file_buffer[n] = '\0';
+        
         char *line = strtok(file_buffer, "\n");
         while(line != NULL) {
             trim(line);
@@ -99,13 +103,14 @@ void copyDynamic(
             *string = '\0';
 
 
-            int r_file_buffer_size = 1028 * 10;
+            int r_file_buffer_size = ONE_KB * 10;
             char r_file_buffer[r_file_buffer_size];
-            FILE *read_file = fopen(line, "r"); // file_name
-            fread(r_file_buffer, r_file_buffer_size, r_file_buffer_size, read_file);
             
-            fwrite(r_file_buffer, sizeof(char), strlen(r_file_buffer), dist_file);
-
+            FILE *read_file = fopen(line, "r"); // file_name
+            size_t rn = fread(r_file_buffer, 1, r_file_buffer_size - 1, read_file);
+            r_file_buffer[rn] = '\0';
+            
+            fwrite(r_file_buffer, 1, rn, dist_file);
             fclose(read_file);
 
             line = strtok(NULL, "\n");
@@ -151,10 +156,10 @@ void copyStatic(
 ) {
     mkdir(dist_dir, 0777);
 
-    int file_name_size = 256;
+    int file_name_size = ONE_KB / 4;
     char file_name[file_name_size];
 
-    int dist_file_name_size = 256;
+    int dist_file_name_size = ONE_KB / 4;
     char dist_file_name[dist_file_name_size];
 
     DIR *src = opendir(dir);
@@ -185,7 +190,7 @@ void copyStatic(
 
 
 int main() {
-    int file_buffer_size = 1028 * 30;
+    int file_buffer_size = ONE_KB * 30;
     char file_buffer[file_buffer_size];
 
     copyDynamic(
