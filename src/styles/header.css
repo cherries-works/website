@@ -44,3 +44,14 @@
     filter: brightness(.8);
     text-shadow: 0 0 1rem white;
 }
+
+@media(max-width: 700px) {
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .navigation {
+        flex-direction: column;
+    }
+}

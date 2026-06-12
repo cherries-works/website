@@ -49,3 +49,9 @@ footer .title h1 {
     font-family: "Bitcount Grid Single", sans-serif;
     opacity: .3;
 }
+
+@media(max-width: 700px) {
+    footer .links {
+        flex-direction: column;
+    }
+}
