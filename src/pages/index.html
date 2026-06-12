@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cherries.works</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <#!- include("./src/templates/header.html") #>
+
+    <div class="hero">
+        <div class="left">
+            <h1>
+                Programs that 
+                <br>
+                <span class="emphasis">respect</span> your
+                <br>
+                machine.
+            </h1>
+            <p>
+                Tools that simply work. No overhead, or bloat.
+            </p>
+            <div class="buttons">
+                <a href="#projects">Explore Projects ></a>
+                <a class="github" href="https://github.com/cherries-works">
+                    View on Github 
+                    <img src="/assets/github.jpg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="terminal">
+                <p class="command">
+                    $ ./cherries
+                </p>
+                <p class="response">
+                    <br>
+                    cherries.works - Philosophy
+                    ----------------------------
+                    <br>
+                    <br>
+                    1. Built for developers.
+                    <br>
+                    <br>
+                    2. Designed for performance.
+                    <br>
+                    <br>
+                    3. Made for machines that deserve even better.
+                    <br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="projects" id="projects">
+        <div class="project">
+            <div class="project_data">
+                <div class="project_title">
+                    <p class="featured">
+                        FEATURED PROJECT
+                    </p>
+                    <h1>
+                        Pulse
+                    </h1>
+                    <p>
+                        A zero-dependency monitoring tool for Linux.
+                        <br>
+                        See system metrics in 10 seconds.
+                    </p>
+                </div>
+                <div class="project_information">
+                    <div class="cards">
+                        <div class="card">
+                            10s setup
+                        </div>
+                        <div class="card">
+                            Single Binary
+                        </div>
+                        <div class="card">
+                            Web UI + API
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <a href="/project/pulse.html">View Pulse</a>
+                        <a class="github" href="https://github.com/cherries-works/pulse">
+                            Github
+                            <img src="/assets/github.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <img src="/assets/dashboard.png" alt="">
+        </div>
+    </div>
+
+    <div class="infos">
+        <div class="info">
+            <h1 class="info_title">
+                Low-Level by choice
+            </h1>
+            <p>
+                We work close to the metal to
+                deliver performance, efficiency
+                and reliability.
+            </p>
+        </div>
+        <div class="info">
+            <h1 class="info_title">
+                No bloat
+            </h1>
+            <p>
+                Single binary, and no libraries. 
+                Self-Hostable whenever you want, 
+                without the trackers.
+            </p>
+        </div>
+        <div class="info">
+            <h1 class="info_title">
+                Open Source
+            </h1>
+            <p>
+                All our projects are 100%
+                open-source. Trust is 
+                built in the open.
+            </p>
+        </div>
+        <div class="info">
+            <h1 class="info_title">
+                Runs anywhere
+            </h1>
+            <p>
+                From beefy servers to Raspberry
+                Pi. If it has a CPU, it can run
+                our tools.
+            </p>
+        </div>
+    </div>
+
+    <#!- include("./src/templates/footer.html") #>
+</body>
+</html>

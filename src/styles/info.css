@@ -1,0 +1,25 @@
+.informations {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem 30%;
+}
+
+.informations .information {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 4rem;
+}
+
+.informations .information h1 {
+    color: white;
+    font-size: 3.5rem;
+}
+
+.informations .information p {
+    color: var(--gray);
+    font-size: 1.5rem;
+}
