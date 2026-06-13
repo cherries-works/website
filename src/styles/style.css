@@ -310,6 +310,8 @@ body {
         flex-direction: column;
         width: 100% !important;
         height: fit-content !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 
     .hero > div {
@@ -331,5 +333,11 @@ body {
 
     .infos {
         flex-direction: column;
+    }
+}
+
+@media(max-width: 500px) {
+    .main h1 {
+        font-size: 2.5rem !important;
     }
 }
