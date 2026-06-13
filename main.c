@@ -90,9 +90,19 @@ void copyDynamic(
         
         char *line = strtok(file_buffer, "\n");
         while(line != NULL) {
+            int old_len = strlen(line);
             trim(line);
+            int new_len = strlen(line);
+            if(new_len < old_len) {
+                for(int i = 0; i < (old_len - new_len); i++) {
+                    fwrite(" ", sizeof(char), 1, dist_file);
+                }
+            }
+
             if(startsWith(line, INCLUDE_STARTER) == 0) {
                 fwrite(line, sizeof(char), strlen(line), dist_file);
+                fwrite("\n", sizeof(char), 1, dist_file);
+
                 line = strtok(NULL, "\n");
                 continue;
             }
@@ -111,6 +121,8 @@ void copyDynamic(
             r_file_buffer[rn] = '\0';
             
             fwrite(r_file_buffer, 1, rn, dist_file);
+            fwrite("\n", sizeof(char), 1, dist_file);
+
             fclose(read_file);
 
             line = strtok(NULL, "\n");
