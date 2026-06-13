@@ -54,4 +54,8 @@ footer .title h1 {
     footer .links {
         flex-direction: column;
     }
+
+    footer .title {
+        display: none;
+    }
 }

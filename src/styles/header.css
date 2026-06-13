@@ -4,7 +4,6 @@
     justify-content: space-between;
     padding: 1rem;
     background-color: var(--black);
-    margin: 1rem;
     border-bottom: 2px solid var(--red);
 }
 
@@ -53,5 +52,9 @@
 
     .navigation {
         flex-direction: column;
+    }
+
+    .navigation a {
+        text-align: center;
     }
 }
