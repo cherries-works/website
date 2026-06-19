@@ -192,9 +192,7 @@ void copyStatic(
             continue;
         }
 
-        printf("%s -> %s\n", file_name, dist_file_name);
         copyFile(file_name, dist_file_name);
-
 
         fclose(file);
     }

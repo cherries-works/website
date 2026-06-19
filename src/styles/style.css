@@ -133,6 +133,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+    gap: 2rem;
     padding: 2rem 15%;
     padding-top: 15rem;
     padding-bottom: 10rem;

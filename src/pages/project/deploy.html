@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cherries.works Deply</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/info.css">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <#!- include("./src/templates/header.html") #>
+
+    <section class="informations">
+        <section class="information">
+            <h1>
+                Deploying without the complexity.
+            </h1>
+            <p>
+                Deploy is a lightweight deployment tool designed for developers, hobbyists, and self-hosters who want reliable application deployments without building an entire CI/CD platform.
+                <br>
+                <br>
+                Many deployment solutions require pipelines, runners, containers, agents, orchestration platforms, or cloud services before a single application can be updated.
+                <br>
+                <br>
+                Deploy takes a different approach.
+                <br>
+                <br>
+                Download it, point it at your repository, and automatically deploy new commits in seconds.
+            </p>
+
+        </section>
+        <section class="information">
+            <h1>
+                Why Deploy?
+            </h1>
+            <p>
+                Modern deployment platforms are incredibly capable, but often far more complicated than many projects actually need.
+                <br>
+                <br>
+                Deploy focuses on the essentials:
+                <br>
+                <br>
+                * Automatic Git repository updates
+                <br>
+                * Configurable build commands
+                <br>
+                * Process management
+                <br>
+                * Automatic restarts
+                <br>
+                * Health check delays
+                <br>
+                * Rollback on failed deployments
+                <br>
+                * Minimal configuration
+                <br>
+                * Single executable
+                <br>
+                <br>
+                No pipelines.
+                <br>
+                <br>
+                No containers.
+                <br>
+                <br>
+                No external services.
+            </p>
+        </section>
+        <section class="information">
+            <h1>
+                Designed for Simplicity
+            </h1>
+            <p>
+                Deploy was built around a simple idea:
+                <br>
+                <br>
+                > Deploying software should be automatic, predictable, and easy to understand.
+                <br>
+                <br>
+                A single configuration file defines how your application is built and started.
+                <br>
+                <br>
+                Deploy continuously watches your repository, detects new commits, rebuilds your application, and safely replaces the running process while keeping the previous version available if something goes wrong.
+                <br>
+                <br>
+                Whether you're deploying a personal website, an API, a Raspberry Pi project, or a small production service, Deploy aims to stay out of your way.
+            </p>
+        </section>
+        <section class="information">
+            <h1>
+                Fast Setup
+            </h1>
+            <p>
+                Clone your repository.
+                <br>
+                <br>
+                Define your build command.
+                <br>
+                <br>
+                Start Deploy.
+                <br>
+                <br>
+                Your application is now watching for new commits.
+            </p>
+        </section>
+        <section class="information">
+            <h1>
+                Automatic Updates
+            </h1>
+            <p>
+                Deploy continuously monitors your configured branch.
+                <br>
+                <br>    
+                When new commits arrive, it automatically:
+                <br>
+                <br>
+                * Updates the repository
+                <br>
+                * Builds the project
+                <br>
+                * Starts the new version
+                <br>
+                * Rolls back automatically if the deployment fails
+            </p>
+        </section>
+        <section class="information">
+            <h1>
+                Process Management
+            </h1>
+            <p>
+                Deploy manages your application's lifecycle for you.
+                <br>
+                <br>
+                It starts your application, tracks the running process, performs graceful restarts, and keeps your service online throughout updates whenever possible.
+            </p>
+        </section>
+        <section class="information">
+            <h1>
+                Lightweight
+            </h1>
+            <p>
+                Deploy is written with efficiency in mind.
+                <br>
+                <br>
+                Low memory usage.
+                <br>
+                <br>
+                Minimal CPU overhead.
+                <br>
+                <br>
+                No background services.
+            </p>
+        </section>
+        <section class="information">
+            <h1>
+                Raspberry Pi Friendly
+            </h1>
+            <p>
+                Deploy runs comfortably on modest hardware.
+                <br>
+                <br>    
+                Whether you're deploying software to a Raspberry Pi, a VPS, or a dedicated Linux server, Deploy is designed to remain small, fast, and reliable.
+            </p>
+        </section>
+        <section class="information">
+            <h1>
+                Open Source
+            </h1>
+            <p>
+                Deploy is completely open source.
+                <br>
+                <br>    
+                The source code, issue tracker, and documentation are available publicly, allowing anyone to inspect, modify, and contribute to the project.
+                <br>
+                <br>
+                We believe trust starts with transparency.
+            </p>
+        </section>
+        <section class="information">
+            <h1>
+                Getting Started
+            </h1>
+            <p>
+                Install Deploy.
+                <br>
+                <br>
+                Configure your repository.
+                <br>
+                <br>
+                Start Deploy.
+                <br>
+                <br>
+                Push code.
+                <br>
+                <br>
+                That's it.
+            </p>
+        </section>
+        <section class="information">
+            <h1>
+                Check it out
+            </h1>
+            <a href="https://github.com/cherries-works/deploy">Deploy on Github</a>
+        </section>
+    </section>
+
+    <#!- include("./src/templates/footer.html") #>
+</body>
+</html>
