@@ -13,28 +13,48 @@
 
 <url>
   <loc>https://cherries.works/</loc>
-  <lastmod>2026-06-26T03:41:46+00:00</lastmod>
+  <lastmod>2026-06-26T03:49:18+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://cherries.works/about</loc>
-  <lastmod>2026-06-26T03:41:46+00:00</lastmod>
+  <lastmod>2026-06-26T03:49:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://cherries.works/vision</loc>
-  <lastmod>2026-06-26T03:41:46+00:00</lastmod>
+  <lastmod>2026-06-26T03:49:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://cherries.works/project/pulse</loc>
-  <lastmod>2026-06-26T03:41:46+00:00</lastmod>
+  <lastmod>2026-06-26T03:49:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://cherries.works/project/deploy</loc>
-  <lastmod>2026-06-26T03:41:46+00:00</lastmod>
+  <lastmod>2026-06-26T03:49:18+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cherries.works/blogs</loc>
+  <lastmod>2026-06-26T03:49:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cherries.works/news</loc>
+  <lastmod>2026-06-26T03:49:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cherries.works/blogs/1</loc>
+  <lastmod>2026-06-26T03:49:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cherries.works/news/1</loc>
+  <lastmod>2026-06-26T03:49:18+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 </urlset>
