@@ -1,0 +1,6 @@
+# cherries.works, from robots for robots.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://cherries.works/sitemap.xml
