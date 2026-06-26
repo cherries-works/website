@@ -162,6 +162,12 @@ char *STYLES_SRC_DIR = "./src/styles";
 char *ASSETS_SRC_DIR = "./src/assets";
 char *STYLES_DIST_DIR = "./dist/styles";
 char *ASSETS_DIST_DIR = "./dist/assets";
+
+char *ROBOTS_FILE = "./src/robots.txt";
+char *SITEMAP_FILE = "./src/sitemap.xml";
+char *ROBOTS_DIST = "./dist/robots.txt";
+char *SITEMAP_DIST = "./dist/sitemap.xml";
+
 void copyStatic(
     char *dir,
     char *dist_dir
@@ -193,9 +199,11 @@ void copyStatic(
         }
 
         copyFile(file_name, dist_file_name);
-
         fclose(file);
     }
+
+    copyFile(ROBOTS_FILE, ROBOTS_DIST);
+    copyFile(SITEMAP_FILE, SITEMAP_DIST);
 }
 
 
