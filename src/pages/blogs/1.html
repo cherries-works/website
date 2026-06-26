@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cherries.works</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/info.css">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <#!- include("./src/templates/header.html") #>
+
+    <section class="informations">
+        <section class="information">
+            <h1>
+                AI and C are incompatible.
+            </h1>
+            <p>
+                In the most literal sense possible.
+                <br>
+                <br>
+                Everyone is talking about AI replacing programmers. For many languages, AI can be an impressive productivity tool. It can generate boilerplate, explain unfamiliar code, and help you move faster.
+                <br>
+                <br>
+                <b>C is built different.</b>
+                <br>
+                <br>
+                C gives you direct access to memory, pointers, files, processes, and the operating system. It does not protect you from mistakes. If you dereference an invalid pointer, write one byte past the end of an allocation, or free memory twice, your program may still compile perfectly. It may even appear to work... until it crashes on a customer's machine months later.
+            </p>
+        </section>
+        <section class="information">
+            <h1>
+                LLMs have no idea.
+            </h1>
+            <p>
+                Large language models don't understand your program. They predict text based on patterns they have seen before. Most of the time, those predictions are convincing enough to compile. Unfortunately, "compiles" and "correct" are very different things in C.
+                <br>
+                <br>
+                A single incorrect assumption can introduce undefined behavior. An unchecked return value can become a security vulnerability. Forgetting to consider ownership of dynamically allocated memory can create leaks that slowly consume system resources. These are not theoretical problems; they are some of the most common bugs in production C software.
+                <br>
+                <br>
+                The most dangerous part is not that AI makes mistakes. <b>Humans do too.</b>
+                <br>
+                <br>
+                The danger is that AI makes mistakes <b>confidently.</b>
+                <br>
+                <br>
+                Generated code often looks clean. Variable names are reasonable. The formatting is perfect. Comments explain exactly what the code is supposedly doing. This presentation creates a false sense of correctness, making subtle bugs much harder to notice during review.
+                <br>
+                <br>
+                In higher-level languages, the runtime often catches many of these errors. In C, there is usually nothing standing between a bad pointer and corrupted memory.
+            </p>
+        </section>
+        <section class="information">
+            <h1>
+                This does not mean AI is useless.
+            </h1>
+            <p>
+                AI can explain algorithms, summarize documentation, help understand compiler errors, or generate small examples. These are all valuable uses. The problems begin when generated code is accepted without understanding every allocation, every pointer, every boundary check, and every possible failure path.
+                <br>
+                <br>
+                If you cannot explain every line of AI-generated C code, you should not merge it into your project.
+                <br>
+                <br>
+                The compiler is not proof that your code is correct. Passing tests is not proof that your code is safe. And AI is certainly not proof that your implementation is sound.
+                <br>
+                <br>
+                If you need speed use AI, but know that fast cars crash the most.
+            </p>
+        </section>
+    </section>
+
+    <#!- include("./src/templates/footer.html") #>
+</body>
+</html>

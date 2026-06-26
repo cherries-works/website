@@ -1,0 +1,39 @@
+.news,
+.blogs {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: calc(100% - 10rem);
+    padding: 5rem;
+    margin: 1rem 5rem;
+    box-sizing: border-box;
+}
+
+.news > a,
+.blogs > a {
+    width: auto;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+    padding: 2rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: var(--bg);
+}
+
+.news > a > p,
+.blogs > a > p {
+    color: gray;
+}
+
+@media (max-width: 700px) {
+    .news,
+    .blogs {
+        width: calc(100% - 2rem);
+        padding: 3rem 1rem;
+        margin: 1rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

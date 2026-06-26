@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cherries.works</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/info.css">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <#!- include("./src/templates/header.html") #>
+
+    <section class="informations">
+        <section class="information">
+            <h1>
+                Pulse v0.1.1, more reliable daemon
+            </h1>
+            <p>
+                Pulse v0.1.1 is the first release that moves beyond simply monitoring processes. The focus of this update is reliability and persistence, making Pulse more useful for services that are expected to run continuously.
+            </p>
+        </section>
+        <section class="information">
+            <h1>
+                Better Daemon Management
+            </h1>
+            <p>
+                The daemon has also been improved internally.
+                <br>
+                <br>
+                When Pulse is stopped, all managed processes are terminated cleanly and their PID information is removed automatically. This keeps the runtime environment predictable and avoids stale state from previous sessions.
+                <br>
+                <br>
+                Managing long-running services should feel straightforward, not fragile.      
+            </p>
+        </section>
+        <section class="information">
+            <h1>
+                Internal Cleanup
+            </h1>
+            <p>
+                While most users will notice the new features, a large part of this release was spent improving the project's internals.
+                <br>
+                <br>
+                Several parts of the codebase were reorganized to make future development easier, reduce complexity, and prepare Pulse for larger features in upcoming releases.
+                <br>
+                <br>
+                Not every improvement is visible on the surface, but they make the project significantly easier to maintain.      
+            </p>
+        </section>
+        <section class="information">
+            <h1>
+                Looking Forward
+            </h1>
+            <p>
+                Pulse is still in its early stages, but the direction is becoming clearer.
+                <br>
+                <br>
+                The goal has never been to build another heavyweight process manager. Pulse aims to stay lightweight, understandable, and easy to deploy while providing the tools needed to monitor services with confidence.
+                <br>
+                <br>
+                v0.1.1 is another step toward that goal.
+                <br>
+                <br>
+                <br>
+                <br>
+                As always, feedback, bug reports, and contributions are welcome. Every issue discovered today helps make the next release better.
+            </p>
+        </section>
+    </section>
+
+    <#!- include("./src/templates/footer.html") #>
+</body>
+</html>
