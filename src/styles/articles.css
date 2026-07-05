@@ -6,6 +6,8 @@
     width: calc(100% - 10rem);
     padding: 5rem;
     margin: 1rem 5rem;
+    padding-top: 0;
+    gap: 1rem;
     box-sizing: border-box;
 }
 
