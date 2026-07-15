@@ -13,6 +13,9 @@
 
 .news > a,
 .blogs > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: auto;
     height: 100%;
     color: white;
