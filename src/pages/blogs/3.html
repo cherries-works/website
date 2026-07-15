@@ -38,13 +38,16 @@
             </h1>
             <p>
                 Most developers experience HTTP through libraries.
-                <br>
-                <br>
-                <code>
-                    app.get("/", (req, res) => {
-                        res.send("Hello, World!");
-                    });
-                </code>
+            </p>
+            <br>
+            <br>
+            <pre class="code">
+    app.get("/", (req, res) => {
+        res.send("Hello, World!");
+    });</pre>
+            <br>
+            <br>
+            <p>
                 That's perfectly fine.
                 But behind those three lines is an enormous amount of machinery.
                 A socket has to be created.
