@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <#!- include("./src/templates/head.html") #>
+
+    <title>cherries.works</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/info.css">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <#!- include("./src/templates/header.html") #>
+
+    <section class="informations">
+        <section class="information">
+            <h1>
+                Why Every Programmer Should Build an HTTP Server Once
+            </h1>
+            <p>
+                The first HTTP server I wrote wasn't good.
+                <br>
+                <br>
+                It wasn't fast. It wasn't secure. It certainly wasn't production-ready.
+                <br>
+                <br>
+                It barely deserved to be called a web server at all.
+                <br>
+                <br>
+                It accepted a TCP connection, read a request, and sent back a small HTML page.
+                <br>
+                <br>
+                Yet in those few hundred lines of code, I learned more about how the web actually works than I had after years of using web frameworks.
+            </p>
+        </section>
+        <section class="information">
+            <h1>
+                The Web Isn't Magic
+            </h1>
+            <p>
+                Most developers experience HTTP through libraries.
+                <br>
+                <br>
+                <code>
+                    app.get("/", (req, res) => {
+                        res.send("Hello, World!");
+                    });
+                </code>
+                That's perfectly fine.
+                But behind those three lines is an enormous amount of machinery.
+                A socket has to be created.
+                The operating system has to accept a connection.
+                Bytes arrive over TCP.
+                <br>
+                <br>
+                Those bytes have to be buffered, parsed, and validated.
+                Headers need to be interpreted.
+                The request line has to be split into its method, path, and protocol version.
+                A response has to be constructed according to the HTTP specification.
+                The connection needs to be closed—or kept alive.
+                None of this is particularly complicated.
+                <br>
+                It's just hidden.
+            </p>
+        </section>
+        <section class="information">
+            <h1>
+                You Stop Treating HTTP Like a Black Box
+            </h1>
+            <p>
+                Once you've written even a tiny server yourself, network debugging becomes much easier.
+                <br>
+                <br>
+                A 400 Bad Request is no longer just an error message.
+                You understand that your parser rejected malformed input.
+                <br>
+                <br>
+                A 404 isn't something your framework invented.
+                It's simply a status code you decided to return.
+
+                <br>
+                <br>
+                Headers stop feeling mysterious.
+                <br>
+                You know they're just text separated by carriage returns.
+                The protocol becomes understandable because you've implemented part of it yourself.
+            </p>
+        </section>
+        <section class="information">
+            <h1>
+                You Learn to Respect Input
+            </h1>
+            <p>
+                One of the first surprises is how messy real requests are.
+                <br>
+                <br>
+                Browsers don't send identical headers.
+                <br>
+                <br>
+                Clients omit things.
+                <br>
+                <br>
+                Some send unexpected whitespace, or disconnect halfway through a request, or even intentionally send malformed data.
+                <br>
+                <br>
+                Writing a parser forces you to assume nothing.
+                <br>
+                Every byte has to be treated as untrusted. That's a lesson that extends far beyond networking.
+            </p>
+        </section>
+        <section class="information">
+            <h1>
+                You Appreciate Your Framework More
+            </h1>
+            <p>
+                Ironically, writing an HTTP server often makes you appreciate frameworks even more.
+                <br>
+                <br>
+                You understand exactly what they're saving you from.
+                <ul>
+                    <li>
+                        Routing.
+                    </li>
+                    <li>
+                        Keep-alive.
+                    </li>
+                    <li>
+                        Chunked transfer encoding.
+                    </li>
+                    <li>
+                        Compression.
+                    </li>
+                    <li>
+                        TLS.
+                    </li>
+                    <li>
+                        Error handling.
+                    </li>
+                    <li>
+                        Logging.
+                    </li>
+                    <li>
+                        Concurrency.
+                    </li>
+                </ul>
+                <br>
+                The difference is that now you're making an informed trade-off.
+                <br>
+                <br>
+                You're using a framework because you understand the complexity—not because you never saw it.
+            </p>
+        </section>
+        <section class="information">
+            <h1>
+                Build One
+            </h1>
+            <p>
+                Keep it small. Listen on a port and accept a connection.
+                <br>
+                Parse the request line and return a static HTML page.
+                <br>
+                <br>
+                That is enough.
+                <br>
+                You don't need routing, templates, middleware.
+                <br>
+                <br>
+                You certainly don't need thousands of dependencies.
+                <br>
+                You just need a socket and a curiosity about what happens underneath.
+                <br>
+                You will NEVER look at app.get("/") the same way again.
+            </p>
+        </section>
+    </section>
+
+    <#!- include("./src/templates/footer.html") #>
+</body>
+</html>
