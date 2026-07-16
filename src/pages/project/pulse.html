@@ -14,13 +14,13 @@
     <section class="informations">
         <section class="information">
             <h1>
-                Monitoring without the overhead.
+                Simple monitoring.
             </h1>
             <p>
-                Pulse is a lightweight monitoring tool designed for developers, operators, and self-hosters who want immediate visibility into their systems without spending hours configuring an observability stack.
+                Pulse is a lightweight monitoring tool designed for developers, who want immediate visibility into their systems as fast as possible.
                 <br>
                 <br>
-                Most monitoring solutions require multiple services, databases, dashboards, agents, or containers before a single metric becomes visible.
+                Most monitoring tools require auth, keys, and config files before a single metric is shown.
                 <br>
                 <br>    
                 Pulse takes a different approach.
@@ -35,36 +35,40 @@
                 Why Pulse?
             </h1>
             <p>
-                Modern observability tooling is powerful, but often excessive for smaller deployments, personal servers, Raspberry Pis, edge devices, and self-hosted infrastructure.
+                Monitoring tools these days are powerful, however too powerful for smaller deployments, Raspberry Pis, and self-hosted infrastructure.
                 <br>
                 <br>
                 Pulse focuses on the essentials:
                 <br>
                 <br>
-                * CPU usage
+                <ul>
+                    <li>
+                        CPU usage
+                    </li>
+                    <li>
+                        Memory usage
+                    </li>
+                    <li>
+                        Disk utilization
+                    </li>
+                    <li>
+                        Network activity
+                    </li>
+                    <li>
+                        System statistics
+                    </li>
+                    <li>
+                        Historical metrics
+                    </li>
+                    <li>
+                        Built-in web dashboard
+                    </li>
+                    <li>
+                        API access
+                    </li>
+                </ul>
                 <br>
-                * Memory usage
-                <br>
-                * Disk utilization
-                <br>
-                * Network activity
-                <br>
-                * System statistics
-                <br>
-                * Historical metrics
-                <br>
-                * HTTP API access
-                <br>
-                * Built-in web dashboard
-                <br>
-                <br>
-                No complicated setup.
-                <br>
-                <br>
-                No external dependencies.
-                <br>
-                <br>
-                No unnecessary overhead.
+                Pulse only include the essentials to keep everything simple.
             </p>
         </section>
         <section class="information">
@@ -75,7 +79,7 @@
                 Pulse was built around a simple idea:
                 <br>
                 <br>
-                > Monitoring should help you understand your machine, not become another system you need to maintain.
+                Monitoring should help you understand your machine, not become another system you need to maintain.
                 <br>
                 <br>
                 The entire experience is designed to get you from installation to useful metrics as quickly as possible.
@@ -92,13 +96,10 @@
                 Get up and running in seconds.
                 <br>
                 <br>
-                No database configuration.
+                Clone the GitHub repository, run the Makefile, and then run the
+                executeable.
                 <br>
-                <br>    
-                No container orchestration.
-                <br>
-                <br>
-                No multi-service deployments.
+                (It is actually this easy)
             </p>
         </section>
         <section class="information">
@@ -106,21 +107,21 @@
                 Built-in Dashboard
             </h1>
             <p>
-                Pulse includes a web-based interface for viewing live system metrics directly from your browser.
+                Pulse has a web-based interface for viewing live system metrics directly from your browser.
                 <br>
                 <br>    
-                Monitor resource usage from anywhere on your network through a clean and responsive dashboard.
+                So you can monitor resource usage from anywhere on your network.
             </p>
         </section>
         <section class="information">
             <h1>
-                HTTP API
+                API
             </h1>
             <p>
                 All collected metrics are available through a simple API.
                 <br>
                 <br>    
-                Integrate Pulse into your own tools, dashboards, automation systems, or monitoring workflows.
+                With that you can integrate Pulse into your own tools, dashboards, or monitoring workflows.
             </p>
         </section>
         <section class="information">
@@ -131,13 +132,10 @@
                 Pulse is built with efficiency in mind.
                 <br>
                 <br>    
-                Low memory usage.
+                Low memory usage (~2MB).
                 <br>
-                <br> 
-                Low CPU overhead.
-                <br>
-                <br>
-                Minimal impact on the systems it monitors.
+                Minimal impact on the systems it monitors, which is important, so it does not impact the
+                displayed usage.
             </p>
         </section>
         <section class="information">
@@ -148,7 +146,7 @@
                 Pulse runs comfortably on modest hardware.
                 <br>
                 <br>    
-                Whether you're monitoring a Raspberry Pi, a small VPS, or a dedicated server, Pulse is designed to remain lightweight and responsive.
+                Whether you're monitoring a Raspberry Pi (4B), a small VPS, or a dedicated server, Pulse is designed to remain lightweight and responsive.
             </p>
         </section>
         <section class="information">
@@ -158,11 +156,8 @@
             <p>
                 Pulse is completely open source.
                 <br>
-                <br>    
+                <br>
                 The source code, issue tracker, and documentation are available publicly, allowing anyone to inspect, modify, and contribute to the project.
-                <br>
-                <br>
-                We believe trust starts with transparency.
             </p>
         </section>
         <section class="information">
@@ -170,13 +165,13 @@
                 Getting Started
             </h1>
             <p>
-                Install Pulse.
-                <br>
-                <br>    
-                Run Pulse.
+                Clone Pulse.
                 <br>
                 <br>
-                Open your browser.
+                Build it.
+                <br>
+                <br>
+                Run it.
                 <br>
                 <br>
                 Start monitoring.

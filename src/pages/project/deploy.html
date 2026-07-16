@@ -14,16 +14,14 @@
     <section class="informations">
         <section class="information">
             <h1>
-                Deploying without the complexity.
+                Deploy as soon as you can.
             </h1>
             <p>
-                Deploy is a lightweight deployment tool designed for developers, hobbyists, and self-hosters who want reliable application deployments without building an entire CI/CD platform.
+                Deploy is a simple deployment tool designed for developers who want reliable application deployments.
                 <br>
                 <br>
-                Many deployment solutions require pipelines, runners, containers, agents, orchestration platforms, or cloud services before a single application can be updated.
-                <br>
-                <br>
-                Deploy takes a different approach.
+                In most cases a CI/CD pipeline is used to handle deployments, but for simpler deployments, where 
+                developers don't want to spend an hour configuring a .yaml file, use Deploy.
                 <br>
                 <br>
                 Download it, point it at your repository, and automatically deploy new commits in seconds.
@@ -41,30 +39,35 @@
                 Deploy focuses on the essentials:
                 <br>
                 <br>
-                * Automatic Git repository updates
+                <ul>
+                    <li>
+                        Automatic Git repository updates
+                    </li>
+                    <li>
+                        Configurable build commands
+                    </li>
+                    <li>
+                        Process management
+                    </li>
+                    <li>
+                        Automatic restarts
+                    </li>
+                    <li>
+                        Health check delays
+                    </li>
+                    <li>
+                        Rollback on failed deployments
+                    </li>
+                    <li>
+                        Minimal configuration
+                    </li>
+                    <li>
+                        Single executable
+                    </li>
+                </ul>
                 <br>
-                * Configurable build commands
                 <br>
-                * Process management
-                <br>
-                * Automatic restarts
-                <br>
-                * Health check delays
-                <br>
-                * Rollback on failed deployments
-                <br>
-                * Minimal configuration
-                <br>
-                * Single executable
-                <br>
-                <br>
-                No pipelines.
-                <br>
-                <br>
-                No containers.
-                <br>
-                <br>
-                No external services.
+                We do require a .toml file, but that is kept to a BARE minimum.
             </p>
         </section>
         <section class="information">
@@ -75,16 +78,16 @@
                 Deploy was built around a simple idea:
                 <br>
                 <br>
-                > Deploying software should be automatic, predictable, and easy to understand.
+                Deploying software should be automatic, fast-setup, and easy to understand:
                 <br>
                 <br>
                 A single configuration file defines how your application is built and started.
                 <br>
                 <br>
-                Deploy continuously watches your repository, detects new commits, rebuilds your application, and safely replaces the running process while keeping the previous version available if something goes wrong.
+                Deploy continuously watches your repository, detects new commits, rebuilds your application, and (safely) replaces the running process while keeping the previous version available if something goes wrong, and rollsback if something happens to go wrong...
                 <br>
                 <br>
-                Whether you're deploying a personal website, an API, a Raspberry Pi project, or a small production service, Deploy aims to stay out of your way.
+                Whether you're deploying a personal website, a Raspberry Pi project, or a small service, Deploy aims to stay out of your way.
             </p>
         </section>
         <section class="information">
@@ -95,7 +98,7 @@
                 Clone your repository.
                 <br>
                 <br>
-                Define your build command.
+                Follow the instructions given.
                 <br>
                 <br>
                 Start Deploy.
@@ -109,19 +112,26 @@
                 Automatic Updates
             </h1>
             <p>
-                Deploy continuously monitors your configured branch.
+                Deploy monitors your repository.
                 <br>
                 <br>    
                 When new commits arrive, it automatically:
                 <br>
                 <br>
-                * Updates the repository
-                <br>
-                * Builds the project
-                <br>
-                * Starts the new version
-                <br>
-                * Rolls back automatically if the deployment fails
+                <ul>
+                    <li>
+                        Updates the repository
+                    </li>
+                    <li>
+                        Builds the project
+                    </li>
+                    <li>
+                        Starts the new version
+                    </li>
+                    <li>
+                        Rolls back automatically if the deployment fails
+                    </li>
+                </ul>
             </p>
         </section>
         <section class="information">
@@ -140,16 +150,12 @@
                 Lightweight
             </h1>
             <p>
-                Deploy is written with efficiency in mind.
+                Deploy is built with efficiency in mind.
                 <br>
+                <br>    
+                Low memory usage (~20MB).
                 <br>
-                Low memory usage.
-                <br>
-                <br>
-                Minimal CPU overhead.
-                <br>
-                <br>
-                No background services.
+                No background processes, except what you deployed of course.
             </p>
         </section>
         <section class="information">
@@ -157,10 +163,10 @@
                 Raspberry Pi Friendly
             </h1>
             <p>
-                Deploy runs comfortably on modest hardware.
+                Deploy simply runs.
                 <br>
                 <br>    
-                Whether you're deploying software to a Raspberry Pi, a VPS, or a dedicated Linux server, Deploy is designed to remain small, fast, and reliable.
+                Whether you're deploying software to a Raspberry Pi, or a VPS, Deploy is designed to remain small, fast, and reliable.
             </p>
         </section>
         <section class="information">
@@ -172,9 +178,6 @@
                 <br>
                 <br>    
                 The source code, issue tracker, and documentation are available publicly, allowing anyone to inspect, modify, and contribute to the project.
-                <br>
-                <br>
-                We believe trust starts with transparency.
             </p>
         </section>
         <section class="information">
@@ -182,16 +185,13 @@
                 Getting Started
             </h1>
             <p>
-                Install Deploy.
+                Clone Deploy.
                 <br>
                 <br>
                 Configure your repository.
                 <br>
                 <br>
-                Start Deploy.
-                <br>
-                <br>
-                Push code.
+                Run Deploy.
                 <br>
                 <br>
                 That's it.
