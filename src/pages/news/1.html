@@ -17,7 +17,7 @@
                 Pulse v0.1.1, more reliable daemon
             </h1>
             <p>
-                Pulse v0.1.1 is the first release that moves beyond simply monitoring processes. The focus of this update is reliability and persistence, making Pulse more useful for services that are expected to run continuously.
+                Pulse v0.1.1 is the first release that makes Pulse a more complex monitoring processes. The focus of this update is to clean up the codebase, making Pulse more useful for services that are expected to run continuously.
             </p>
         </section>
         <section class="information">
@@ -28,10 +28,10 @@
                 The daemon has also been improved internally.
                 <br>
                 <br>
-                When Pulse is stopped, all managed processes are terminated cleanly and their PID information is removed automatically. This keeps the runtime environment predictable and avoids stale state from previous sessions.
+                When Pulse is stopped, all managed processes are terminated cleanly and their PID information is removed automatically. Running Pulse headlessly however is possible as well, but then needs to be stopped with the command "stop".
                 <br>
                 <br>
-                Managing long-running services should feel straightforward, not fragile.      
+                Managing long-running services is really that simple.     
             </p>
         </section>
         <section class="information">
@@ -42,10 +42,10 @@
                 While most users will notice the new features, a large part of this release was spent improving the project's internals.
                 <br>
                 <br>
-                Several parts of the codebase were reorganized to make future development easier, reduce complexity, and prepare Pulse for larger features in upcoming releases.
+                Several parts of the codebase were reorganized to make future development easier, complexity, and prepare Pulse for larger features in upcoming releases.
                 <br>
                 <br>
-                Not every improvement is visible on the surface, but they make the project significantly easier to maintain.      
+                While not visible, it makes the project easier to maintain.
             </p>
         </section>
         <section class="information">
@@ -53,10 +53,10 @@
                 Looking Forward
             </h1>
             <p>
-                Pulse is still in its early stages, but the direction is becoming clearer.
+                Pulse is still in its early stages, but the direction becomes clearer.
                 <br>
                 <br>
-                The goal has never been to build another heavyweight process manager. Pulse aims to stay lightweight, understandable, and easy to deploy while providing the tools needed to monitor services with confidence.
+                The goal is not to build a heavyweight process manager. Pulse aims to stay lightweight, simple, and easy to deploy while providing the tools needed to monitor services with confidence.
                 <br>
                 <br>
                 v0.1.1 is another step toward that goal.

@@ -17,19 +17,13 @@
                 Why Every Programmer Should Build an HTTP Server Once
             </h1>
             <p>
-                The first HTTP server I wrote wasn't good.
+                The first HTTP server I wrote wasn't good... Hell, it wasn't fast. wasn't secure, and it WASN'T production-ready.
                 <br>
                 <br>
-                It wasn't fast. It wasn't secure. It certainly wasn't production-ready.
+                To be honest, it barely deserved the title "web server". It accepted a TCP connection, read a request, and sent back a small HTML page.
                 <br>
                 <br>
-                It barely deserved to be called a web server at all.
-                <br>
-                <br>
-                It accepted a TCP connection, read a request, and sent back a small HTML page.
-                <br>
-                <br>
-                Yet in those few hundred lines of code, I learned more about how the web actually works than I had after years of using web frameworks.
+                Yet in those few hundred lines of code, I learned a lot more about how the web actually works than I had after years of using web frameworks (NodeJS / GoLang).
             </p>
         </section>
         <section class="information">
@@ -48,21 +42,15 @@
             <br>
             <br>
             <p>
-                That's perfectly fine.
-                But behind those three lines is an enormous amount of machinery.
-                A socket has to be created.
-                The operating system has to accept a connection.
-                Bytes arrive over TCP.
+                That's perfectly fine, but behind those three lines is an enormous amount of machinery that most people don't see, and a lot of more people don't get to appreciate. 
                 <br>
                 <br>
-                Those bytes have to be buffered, parsed, and validated.
-                Headers need to be interpreted.
-                The request line has to be split into its method, path, and protocol version.
-                A response has to be constructed according to the HTTP specification.
-                The connection needs to be closed—or kept alive.
-                None of this is particularly complicated.
+                A socket has to be created. The operating system has to accept a connection. Bytes arrive over TCP. Bytes get parsed, and validated. Headers interpreted. The request line has to be split into its method, path, and protocol version.
                 <br>
-                It's just hidden.
+                <br>
+                A response has to be constructed according to the HTTP specification. The connection needs to be closed—or kept alive. None of this is (really) that complicated.
+                <br>
+                But it is hidden.
             </p>
         </section>
         <section class="information">
@@ -70,7 +58,7 @@
                 You Stop Treating HTTP Like a Black Box
             </h1>
             <p>
-                Once you've written even a tiny server yourself, network debugging becomes much easier.
+                Once you've written even a tiny server yourself, network debugging becomes way easier.
                 <br>
                 <br>
                 A 400 Bad Request is no longer just an error message.
@@ -79,13 +67,8 @@
                 <br>
                 A 404 isn't something your framework invented.
                 It's simply a status code you decided to return.
-
                 <br>
-                <br>
-                Headers stop feeling mysterious.
-                <br>
-                You know they're just text separated by carriage returns.
-                The protocol becomes understandable because you've implemented part of it yourself.
+                Headers are not mysterious anymore, you know they're just text separated by carriage returns, finally the protocols becomes understandable because you've implemented part of it yourself.
             </p>
         </section>
         <section class="information">
@@ -93,21 +76,10 @@
                 You Learn to Respect Input
             </h1>
             <p>
-                One of the first surprises is how messy real requests are.
+                One of the first surprises is how messy and unorganized real requests actually are. Browsers don't send identical headers, clients omit things, some send unexpected whitespace, or disconnect halfway through a request, or even intentionally send malformed data.
                 <br>
                 <br>
-                Browsers don't send identical headers.
-                <br>
-                <br>
-                Clients omit things.
-                <br>
-                <br>
-                Some send unexpected whitespace, or disconnect halfway through a request, or even intentionally send malformed data.
-                <br>
-                <br>
-                Writing a parser forces you to assume nothing.
-                <br>
-                Every byte has to be treated as untrusted. That's a lesson that extends far beyond networking.
+                Writing a parser forces you to assume nothing, every byte has to be treated as untrusted. That's a lesson that extends far beyond networking, and teaches you about security practices.
             </p>
         </section>
         <section class="information">
@@ -115,10 +87,7 @@
                 You Appreciate Your Framework More
             </h1>
             <p>
-                Ironically, writing an HTTP server often makes you appreciate frameworks even more.
-                <br>
-                <br>
-                You understand exactly what they're saving you from.
+                Ironically, writing an HTTP server often makes you appreciate frameworks even more, because you understand exactly what they're saving you from.
                 <ul>
                     <li>
                         Routing.
@@ -146,10 +115,7 @@
                     </li>
                 </ul>
                 <br>
-                The difference is that now you're making an informed trade-off.
-                <br>
-                <br>
-                You're using a framework because you understand the complexity—not because you never saw it.
+                The difference is that now you're making an informed trade-off, you know what you're saving, you're using a framework because you understand the complexity.
             </p>
         </section>
         <section class="information">
@@ -157,19 +123,18 @@
                 Build One
             </h1>
             <p>
-                Keep it small. Listen on a port and accept a connection.
+                Keep it small, listen on a port and accept a connection.
                 <br>
                 Parse the request line and return a static HTML page.
                 <br>
                 <br>
                 That is enough.
                 <br>
-                You don't need routing, templates, middleware.
+                No routing, templates, middleware, and especially not thousands of dependencies.
                 <br>
                 <br>
-                You certainly don't need thousands of dependencies.
+                Just a socket and a curiosity about what happens underneath.
                 <br>
-                You just need a socket and a curiosity about what happens underneath.
                 <br>
                 You will NEVER look at app.get("/") the same way again.
             </p>

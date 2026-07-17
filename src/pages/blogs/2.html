@@ -17,14 +17,14 @@
                 The Cost of a Single Dependency
             </h1>
             <p>
-                How one npm install quietly turns into 80 packages you've never heard of.
+                A npm install, is not a single package.
                 <br>
                 <br>
                 <br>
-                You need to parse some JSON, format a date, or left-pad a string. The solution is obvious; there's a package for that. One npm install later and you're done. Clean and idiomatic. Some might say, the way modern software is written.
+                Imagine this; you need to parse some JSON, format a date, or left-pad a string. The solution is obvious (especially in NodeJS' case); there's a package for that. One npm install later and you're done. Clean and idiomatic, don't re-invent the wheel, right?
                 <br>
                 <br>
-                But what did that one command <b>actually</b> cost you?
+                But what did that one install <b>actually</b> cost you?
             </p>
         </section>
         <section class="information">
@@ -35,50 +35,52 @@
                 When you add a dependency to your project, you're not just adding one package. You're adding that package and everything it needs to function. Those are called transitive dependencies; packages required by your dependency, and by its dependencies, resolved recursively. You didn't choose them. You may have never heard of them. But they're now part of your software.
                 <br>
                 <br>
-                The numbers are striking. A 2025 empirical study of npm projects found that the average project declares around 31 direct dependencies but ends up pulling in roughly 53 transitive dependencies; a 4.32x amplification rate, with some projects exceeding 10x 1. Another analysis places the average npm project at 79 transitive dependencies per project 2.
+                The numbers are pretty crazy; in 2025 an empirical study of npm projects found that the average project declares around ~31 direct dependencies but ends up pulling in roughly ~53 transitive dependencies; a 4.32x amplification rate, with some projects exceeding 10x.
+                <br>
+                Another analysis places the average npm project at ~79 transitive dependencies per project.
                 <br>
                 <br>
-                Maven (Java) is even worse: projects average just 5.4 direct dependencies but pull in 74.9 transitive dependencies, a 24.7x amplification and a total attack surface of over 80 packages 1.
+                Maven (Java) is even worse: projects average just ~5.4 direct dependencies but pull in ~74.9 transitive dependencies, a 24.7x amplification and a total attack surface of over 80 packages.
                 <br>
                 <br>
-                At the enterprise scale, the picture gets stark. The Black Duck OSSRA 2025 report found that commercial codebases average 911 open source components, with 64% of them being transitive; roughly 583 packages per application that nobody explicitly chose 1.
+                Looking at the enterprise section, the numbers get scary. The Black Duck OSSRA 2025 report found that commercial codebases average ~911 open source components, with 64% of them being transitive; roughly ~583 packages per application that nobody explicitly chose.
                 <br>
                 <br>
-                You write import leftPad from 'left-pad'. You get a tree.
+                The moment you write import leftPad from 'left-pad' you get a tree.
             </p>
         </section>
         <section class="information">
             <h1>
-                What You're Actually Paying
+                What Does it Cost You
             </h1>
             <p>
-                The cost of a dependency isn't just disk space; though that cost is real. A common experience: you clone a simple project, run npm install, and watch hundreds of megabytes fill your node_modules directory 1. Entire tools exist just to prune that directory back down 2.
+                The cost of a dependency isn't just disk space; though that cost is real (literally). A common experience: you clone a simple project, run npm install, and see how hundreds of megabytes fill your node_modules directory. Entire tools exist just to prune that directory back down.
                 <br>
                 <br>
-                But the deeper costs are the ones you can't see:
+                But the deeper costs are the ones you can't see, until it is too late:
                 <br>
                 <br>
-                <b>Security surface area</b>. Every package you depend on is a potential vector. The most vulnerable npm packages in 2026 include widely-used libraries like lodash, cross-spawn, and gun.js, all carrying unpatched transitive dependencies that sit in dependency trees used by millions of applications 1. These aren't edge cases; they're in the trees your project pulls in without asking.
+                <b>Security surface area</b>. Every package you depend on is a potential attack-vector. The most vulnerable npm packages in 2026 include widely-used libraries like lodash, cross-spawn, and gun.js, all carrying unpatched transitive dependencies that sit in dependency trees used by millions of applications. These aren't the edge cases though; they're in the trees your project pulls in without asking.
                 <br>
                 <br>
-                <b>Fragility</b>. On March 22, 2016, a developer named Azer Koçulu unpublished a package called left-pad; 11 lines of code that padded strings. Thousands of projects, including Babel and React, instantly broke and could no longer be built or installed 1. npm was forced to take the unprecedented step of restoring the package to prevent further damage 2. The internet didn't break because of a sophisticated attack. It broke because one person removed 11 lines of code that thousands of projects depended on without realizing it.
+                <b>Fragility</b>. On March 22, 2016, a developer named Azer Koçulu unpublished a package called left-pad; 11 lines of code that padded strings. Thousands of projects, including Babel and React, instantly broke and could no longer be built or installed. NPM was forced to take the unprecedented step of restoring the package to prevent further damage. The internet didn't break because of a sophisticated attack. It broke because one person removed 11 lines of code that thousands of projects depended on without realizing it.
                 <br>
                 <br>
-                <b>Cognitive load</b>. If you can't understand what your software does; if its behavior depends on the internal logic of 80 packages you've never read; then you don't fully own your software. You're operating a system you can't reason about, can't debug at the edges, and can't fully trust.
+                <b>Cognitive load</b>. If you can't understand what your software does, or its behavior depends on the internal logic of 80 packages you've never heard of, then you don't fully own your software. You're coding in an environment where don't have full control, can't debug, and can't trust.
                 <br>
                 <br>
-                <b>Performance</b>. This compounds at the application layer. Electron-based desktop apps bundle an entire Chromium browser, typically weighing in at 100-300 MB and consuming hundreds of megabytes of RAM; even for simple applications 11. By contrast, purpose-built native apps using the system's own webview can come in at 2.5-3 MB and use 30-40 MB of RAM 3. That's roughly a 100x difference in binary size for functionally equivalent software. The dependencies aren't just heavy individually; they stack into something that fundamentally changes the character of the application.
+                <b>Performance</b>. This compounds at the application layer. Electron-based desktop apps bundle an entire Chromium browser, around 100-300 MB and consuming hundreds of megabytes of RAM; even for simple applications. By contrast, purpose-built native apps using the system's own webview can come in at 2.5-3 MB and use 30-40 MB of RAM. That's roughly a 100x difference in binary size for functionally equivalent software. The dependencies aren't just heavy individually; they stack into something that fundamentally changes the character of the application.
             </p>
         </section>
         <section class="information">
             <h1>
-                This Isn't "Never Use Dependencies"
+                This Doesn't Mean "Never Use Dependencies"
             </h1>
             <p>
-                Let's be clear: the answer isn't to write everything from scratch in a vacuum. That's impractical, and it ignores the genuine value of shared, battle-tested code. Cryptography, protocol implementations, complex parsers; these are domains where using a well-maintained library is the correct decision.
+                Let's be clear: the answer isn't to write everything from scratch in a vacuum, that's impractical. It ignores the genuine value of shared, battle-tested code. Cryptography, protocol implementations, complex parsers; these are domains where using a well-maintained library is the correct decision.
                 <br>
                 <br>
-                The point is that each dependency should be a deliberate, justified choice; not a reflex. Not something you reach for because it's one npm install away. When you add a dependency, you should be able to answer:
+                The point is that each dependency should be a deliberate, justified choice. Not just a reflex, or something you reach for because it's one npm install away. When you add a dependency, you should be able to answer:
                 <br>
                 <br>
             </p>
@@ -96,7 +98,7 @@
             <br>
             <br>
             <p>
-                When the answer is "the standard library can handle this" or "I could write this in an afternoon," the dependency isn't saving you time. It's exporting complexity into your future.
+                When the answer is "the standard library can handle this" or "I could write this in an afternoon" the dependency isn't saving you time.
             </p>
         </section>
         <section class="information">
@@ -104,13 +106,13 @@
                 What We're Building Differently
             </h1>
             <p>
-                This is the philosophy behind cherries.works. We want to build tools that solve real problems without requiring an ecosystem of dependencies to function. Tools that start instantly. Tools you can understand; not just use, but understand, from top to bottom, because the code is small enough and focused enough to actually read.
+                This is the philosophy behind cherries.works. We want to build tools that solve real problems without requiring a ton of dependencies to function. Tools that start instantly, and tools that you get; not just use, but understand, from top to bottom, because the code is small and simple enough to actually read.
                 <br>
                 <br>
-                Every dependency we avoid is a package we don't have to audit, a vulnerability surface we don't inherit, a startup cycle we don't have to pay for, and a piece of behavior we don't have to take on faith. That's not stubbornness. It's a design principle.
+                Every dependency we avoid is a package we don't have to audit, a vulnerability surface we don't inherit, a startup cycle we don't have to pay for, and a piece of behavior we don't have to take on faith.
                 <br>
                 <br>
-                Software should respect the person reading its source code as much as the person running it. And the best way to respect both is to keep it lean.
+                Software should respect the person reading its source code just the same as the person running it. The best way to do that, is to keep it lean.
             </p>
         </section>
     </section>
