@@ -171,7 +171,7 @@ char *SITEMAP_DIST = "./dist/sitemap.xml";
 void copyStatic(
     char *dir,
     char *dist_dir
-) {
+) {    
     mkdir(dist_dir, 0777);
 
     int file_name_size = ONE_KB / 4;
