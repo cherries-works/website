@@ -28,7 +28,7 @@
 
 .news > a > p,
 .blogs > a > p {
-    color: gray;
+    color: var(--dark-gray);
 }
 
 @media (max-width: 700px) {
