@@ -28,6 +28,7 @@
     font-size: 2rem;
     margin: 0;
     color: var(--dark);
+    text-decoration: none;
 }
 
 .header .navigation {
