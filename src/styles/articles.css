@@ -18,7 +18,7 @@
     justify-content: space-between;
     width: auto;
     height: 100%;
-    color: white;
+    color: var(--white);
     text-decoration: none;
     padding: 2rem;
     box-sizing: border-box;

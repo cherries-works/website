@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Fredoka:wght@300..700&display=swap');
 
 html {
-    --dark: #A62639;
-    --red: #DB324D;
-    --bg: #511C29;
+    --dark: #a41e32;
+    --red: #ff183e;
+    --bg: #c23838;
     --gray: #A29C9B;
     --dark-gray: #202020;
-    --black: #111111;
+    --white: #f1f1f1;
 }
 
 body {
     margin: 0;
-    background-color: var(--black);
-    height: 100dvh;
+    background-color: var(--white);
+    overflow-x: hidden;
 }
 
 * {
@@ -23,7 +23,7 @@ body {
 
 .emphasis {
     position: relative;
-    color: white;
+    color: var(--red);
     font-family: "Bitcount Grid Single", sans-serif;
 }
 
@@ -41,18 +41,51 @@ body {
 
 .hero {
     position: relative;
-    background-color: var(--black);
+    background-color: var(--white);
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 50%;
     border-top-right-radius: 30%;
-    border-top-left-radius: 70%;
-    /* border-bottom-right-radius: 70%;
-    border-bottom-left-radius: 30%; */
+    border-bottom-right-radius: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
     justify-content: start;
     padding: 2rem;
     padding-top: 3rem;
     box-sizing: border-box;
+    outline: 3px dashed var(--white);
+    height: 90dvh;
+}
+
+.hero .pixel_particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.pixel {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: pixelFloat 4s ease-in-out infinite;
+}
+
+@keyframes pixelFloat {
+    0% {
+        opacity: 0.25;
+        transform: translate(0, 0);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: translate(4px, -6px);
+    }
+
+    100% {
+        opacity: 0.25;
+        transform: translate(0, 0);
+    }
 }
 
 .hero .main {
@@ -61,22 +94,24 @@ body {
     align-items: start;
     justify-content: start;
     padding: 5%;
-    padding-top: 15rem;
+    padding-left: 2rem;
+    padding-top: 10rem;
     width: 100%;
     box-sizing: border-box;
     gap: 1rem;
+    z-index: 1;
 }
 
 .hero .main h1 {
     font-size: 6rem;
-    color: white;
+    color: var(--dark-gray);
     line-height: 90%;
 }
 
 .hero .main p {
     width: 75%;
     font-size: 1.5rem;
-    color: white;
+    color: var(--dark-gray);
     margin-top: 1rem;
 }
 
@@ -101,13 +136,13 @@ body {
     border-radius: 5px;
     box-sizing: border-box;
     background-color: var(--dark-gray);
-    color: white;
+    color: var(--white);
     text-decoration: none;
     font-size: 1.5rem;
 }
 
 .hero .main .buttons .github {
-    background-color: white;
+    background-color: var(--white);
     color: black;
 }
 
@@ -116,11 +151,20 @@ body {
     aspect-ratio: 1/1;
 }
 
+.hero .secondary {
+    padding: 3rem;
+}
+
+.hero .secondary img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
 
 .projects::before {
     position: absolute;
     content: '';
-    background-color: var(--black);
+    background-color: var(--white);
     width: 100%;
     height: 100%;
     margin: unset;
@@ -138,14 +182,13 @@ body {
     padding-top: 15rem;
     padding-bottom: 10rem;
     padding-right: 5%;
-    border-top-right-radius: 50%;
-    border-top-left-radius: 50%;
 
     border-bottom-right-radius: 5%;
     border-bottom-left-radius: 10%;
     
-    background-color: #161616;
-    color: white;
+    background-color: var(--red);
+    color: var(--white);
+    outline: 3px dashed var(--red);
 }
 
 .projects .project {
@@ -158,7 +201,7 @@ body {
 .projects .project > img {
     width: 60%;
     border-radius: 1rem;
-
+    border: 2px dashed red;
 }
 
 .projects .project .project_data .project_title {
@@ -179,6 +222,7 @@ body {
 
 .projects .project .project_data .project_title p {
     font-size: 1.2rem;
+    color: var(--dark-gray);
 }
 
 .projects .project .project_data .project_information {
@@ -194,7 +238,9 @@ body {
 }
 
 .projects .project .project_data .project_information .cards .card {
-    background-color: var(--dark);
+    display: none;
+    background-color: var(--red);
+    color: var(--dark-gray);
     border-radius: 5px;
     padding: .5rem 1rem;
 }
@@ -215,14 +261,14 @@ body {
     border-radius: 5px;
     box-sizing: border-box;
     background-color: var(--dark);
-    color: white;
+    color: var(--white);
     text-decoration: none;
     font-size: 1.3rem;
     align-items: center;
 }
 
 .projects .project .project_data .project_information .buttons .github {
-    background-color: white;
+    background-color: var(--white);
     color: black;
 }
 
@@ -245,7 +291,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    color: white;
+    color: var(--dark-gray);
     padding: 0 2rem;
 }
 
@@ -257,7 +303,7 @@ body {
 .vision::before {
     position: absolute;
     content: '';
-    background-color: var(--black);
+    background-color: var(--white);
     width: 100%;
     height: 100%;
     margin: unset;
@@ -278,14 +324,18 @@ body {
     background-color: var(--red);
 }
 
+.vision {
+    outline: 3px dashed var(--red);
+}
+
 .philosophy {
     align-items: end;
-    background-color: var(--black);
+    background-color: var(--white);
 }
 
 .philosophy * {
     text-align: end;
-    color: white;
+    color: var(--dark-gray);
 }
 
 .vision h1,
@@ -310,13 +360,26 @@ body {
     .hero {
         flex-direction: column;
         width: 100% !important;
-        height: fit-content !important;
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
 
-    .hero > div {
-        width: 100% !important;
+    .hero .main {
+        padding-top: 3rem;
+    }
+
+    .hero .secondary {
+        position: relative;
+        padding-top: 0;
+        width: calc(100% - 3rem * 2);
+        height: calc(100% - 3rem * 2);
+    }
+
+    .hero .secondary img {
+        width: 100%;
+        transform: translateY(-5rem);
+        left: 0;
+        bottom: 0;
     }
 
     .projects .project {

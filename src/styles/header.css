@@ -1,10 +1,13 @@
 .header {
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    width: calc(100% - 3rem);
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
-    background-color: var(--black);
-    border-bottom: 2px solid var(--red);
+    padding: 1.5rem;
+    background-color: var(--white);
+    border-bottom: 3px dashed red;
 }
 
 .header .title {
@@ -16,32 +19,34 @@
 }
 
 .header .title img {
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
 }
 
 .header .title p {
     font-family: "Bitcount Grid Single", sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 0;
-    color: white;
+    color: var(--dark);
 }
 
 .header .navigation {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 2rem;
 }
 
 .header .navigation a {
     font-family: "Bitcount Grid Single", sans-serif;
-    font-size: 1.2rem;
-    color: white;
+    font-size: 1.8rem;
+    color: black;
     transition: .3s;
 }
 
 .header .navigation a:hover {
     filter: brightness(.8);
-    text-shadow: 0 0 1rem white;
+    text-shadow: 0 0 1rem var(--white);
 }
 
 @media(max-width: 700px) {
