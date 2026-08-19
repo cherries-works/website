@@ -16,6 +16,7 @@
     justify-content: center;
     gap: 1rem;
     width: fit-content;
+    text-decoration: none;
 }
 
 .header .title img {
