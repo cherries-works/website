@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Fredoka:wght@300..700&display=swap');
+
+
+.solutions {
+    position: relative;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    padding: 2rem;
+    padding-top: 3rem;
+    box-sizing: border-box;
+    outline: 3px dashed var(--white);
+    gap: 5rem;
+    border-bottom: 3px dashed var(--red);
+}
+
+.solutions .main {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding-left: 2rem;
+    padding-top: 15rem;
+    padding-bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 1rem;
+    z-index: 1;
+}
+
+.solutions .main h1 {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: end;
+}
+
+.solutions .main .main_text {
+    font-size: 7rem;
+    color: var(--dark-gray);
+    line-height: 90%;
+    font-family: "Bitcount Grid Single", sans-serif;
+}
+
+.solutions .main .emphasis {
+    font-size: 9rem;
+    line-height: 90%;
+}
+
+.solutions .secondary {
+    position: relative;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    width: 100%;
+    padding-top: 20rem;
+}
+
+.solutions .secondary p {
+    font-size: 1.3rem;
+}
+
+.projects {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    background-color: var(--red);
+    color: var(--white);
+    outline: 3px dashed var(--red);
+}
+
+.projects .project {
+    display: flex;
+    background-color: var(--white);
+    flex-direction: column;
+    gap: 6rem;
+    border-radius: 5rem;
+    padding: 3rem;
+    box-sizing: border-box;
+    width: 100%;
+    outline: 3px dashed var(--red);
+}
+
+.projects .project > p {
+    font-family: "Bitcount Grid Single", sans-serif;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: var(--red);
+    width: fit-content;
+    padding: 0 .5rem;
+    border-radius: 5px;
+}
+
+.projects .project .project_data .project_title {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--dark-gray);
+}
+
+.projects .project .project_data .project_title h1 {
+    font-size: 3rem;
+    color: var(--dark-gray);
+}
+
+.projects .project .project_data .project_title p {
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+}
+
+.projects .project .project_data .project_information {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 2rem;
+}
+
+.projects .project .project_data .project_information .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.projects .project .project_data .project_information .buttons a {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    width: 100%;
+    padding: 1.5rem 2rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: var(--dark);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.3rem;
+    align-items: center;
+}
+
+
+.vision::before {
+    position: absolute;
+    content: '';
+    background-color: var(--white);
+    width: 100%;
+    height: 100%;
+    margin: unset;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.vision,
+.philosophy {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 4rem 10%;
+    padding-top: 15rem;
+    padding-bottom: 7rem;
+    border-top-right-radius: 10%;
+    background-color: var(--red);
+}
+
+.vision {
+    outline: 3px dashed var(--red);
+}
+
+.philosophy {
+    background-color: var(--white);
+}
+
+.philosophy * {
+    color: var(--dark-gray);
+}
+
+.vision h1,
+.philosophy h1 {
+    font-size: 6rem;
+}
+
+.vision p,
+.philosophy p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1.3rem;
+    width: 50%;
+}
+
+
+@media(max-width: 700px) {
+    .main h1 {
+        font-size: 4rem !important;
+    }
+
+    .hero {
+        flex-direction: column;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .hero .main {
+        padding-top: 3rem;
+    }
+
+    .hero .secondary {
+        position: relative;
+        padding-top: 0;
+        width: calc(100% - 3rem * 2);
+        height: calc(100% - 3rem * 2);
+    }
+
+    .hero .secondary img {
+        width: 100%;
+        transform: translateY(-5rem);
+        left: 0;
+        bottom: 0;
+    }
+
+    .projects .project {
+        flex-direction: column;
+    }
+
+    .projects img {
+        display: none;
+    }
+
+    .vision p,
+    .philosophy p {
+        width: 100%;
+    }
+
+    .infos {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 500px) {
+    .main h1 {
+        font-size: 2.5rem !important;
+    }
+}

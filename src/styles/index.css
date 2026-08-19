@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Fredoka:wght@300..700&display=swap');
+
+html {
+    --dark: #a41e32;
+    --red: #ff183e;
+    --bg: #c23838;
+    --gray: #A29C9B;
+    --dark-gray: #202020;
+    --white: #f1f1f1;
+}
+
+body {
+    margin: 0;
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+* {
+    font-family: "Fredoka";
+    font-weight: normal;
+    margin: 0;
+}
+
+.hero::before {
+    position: absolute;
+    content: '';
+    background-color: var(--red);
+    width: 100%;
+    height: 100%;
+    margin: unset;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hero {
+    position: relative;
+    background-color: var(--white);
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    padding: 2rem;
+    padding-top: 3rem;
+    box-sizing: border-box;
+    outline: 3px dashed var(--white);
+    height: 90dvh;
+}
+
+.hero .pixel_particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.pixel {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: pixelFloat 4s ease-in-out infinite;
+}
+
+@keyframes pixelFloat {
+    0% {
+        opacity: 0.25;
+        transform: translate(0, 0);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: translate(4px, -6px);
+    }
+
+    100% {
+        opacity: 0.25;
+        transform: translate(0, 0);
+    }
+}
+
+.hero .main {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding: 5%;
+    padding-left: 2rem;
+    padding-top: 10rem;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 1rem;
+    z-index: 1;
+}
+
+.hero .main h1 {
+    font-size: 6rem;
+    color: var(--dark-gray);
+    line-height: 90%;
+}
+
+.hero .main p {
+    width: 75%;
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    margin-top: 1rem;
+}
+
+.hero .main .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.hero .main .buttons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    width: 30%;
+    padding: 1.5rem 2rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: var(--dark-gray);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.hero .main .buttons .github {
+    background-color: var(--white);
+    color: black;
+}
+
+.hero .main .buttons .github img {
+    height: 2rem;
+    aspect-ratio: 1/1;
+}
+
+.hero .secondary {
+    padding: 3rem;
+}
+
+.hero .secondary img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
+.projects::before {
+    position: absolute;
+    content: '';
+    background-color: var(--white);
+    width: 100%;
+    height: 100%;
+    margin: unset;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.projects {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 15%;
+    padding-top: 15rem;
+    padding-bottom: 10rem;
+    padding-right: 5%;
+
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 10%;
+    
+    background-color: var(--red);
+    color: var(--white);
+    outline: 3px dashed var(--red);
+}
+
+.projects .project {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.projects .project > img {
+    width: 60%;
+    border-radius: 1rem;
+    border: 2px dashed red;
+}
+
+.projects .project .project_data .project_title {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--dark-gray);
+}
+
+.projects .project .project_data .project_title .featured {
+    color: var(--dark-gray);
+}
+
+.projects .project .project_data .project_title h1 {
+    font-size: 3rem;
+}
+
+.projects .project .project_data .project_title p {
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+}
+
+.projects .project .project_data .project_information {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 2rem;
+}
+
+.projects .project .project_data .project_information .cards {
+    display: flex;
+    gap: 1rem;
+}
+
+.projects .project .project_data .project_information .cards .card {
+    display: none;
+    background-color: var(--red);
+    color: var(--dark-gray);
+    border-radius: 5px;
+    padding: .5rem 1rem;
+}
+
+.projects .project .project_data .project_information .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.projects .project .project_data .project_information .buttons a {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    width: 100%;
+    padding: 1.5rem 2rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: var(--dark);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.3rem;
+    align-items: center;
+}
+
+.projects .project .project_data .project_information .buttons .github {
+    background-color: var(--white);
+    color: black;
+}
+
+.projects .project .project_data .project_information .buttons .github img {
+    height: 2rem;
+    width: 2rem;
+    aspect-ratio: 1/1;
+}
+
+.infos {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    padding: 4rem 10%;
+    padding-bottom: 7rem;
+    margin-bottom: 3rem;
+}
+
+.infos .info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--dark-gray);
+    padding: 0 2rem;
+}
+
+.infos .info p {
+    color: gray;
+}
+
+
+.vision::before {
+    position: absolute;
+    content: '';
+    background-color: var(--white);
+    width: 100%;
+    height: 100%;
+    margin: unset;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.vision,
+.philosophy {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 4rem 10%;
+    padding-bottom: 7rem;
+    border-top-right-radius: 10%;
+    background-color: var(--red);
+}
+
+.vision {
+    outline: 3px dashed var(--red);
+}
+
+.philosophy {
+    align-items: end;
+    background-color: var(--white);
+}
+
+.philosophy * {
+    text-align: end;
+    color: var(--dark-gray);
+}
+
+.vision h1,
+.philosophy h1 {
+    font-size: 3rem;
+}
+
+.vision p,
+.philosophy p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1.3rem;
+    width: 30%;
+}
+
+
+@media(max-width: 700px) {
+    .main h1 {
+        font-size: 4rem !important;
+    }
+
+    .hero {
+        flex-direction: column;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .hero .main {
+        padding-top: 3rem;
+    }
+
+    .hero .secondary {
+        position: relative;
+        padding-top: 0;
+        width: calc(100% - 3rem * 2);
+        height: calc(100% - 3rem * 2);
+    }
+
+    .hero .secondary img {
+        width: 100%;
+        transform: translateY(-5rem);
+        left: 0;
+        bottom: 0;
+    }
+
+    .projects .project {
+        flex-direction: column;
+    }
+
+    .projects img {
+        display: none;
+    }
+
+    .vision p,
+    .philosophy p {
+        width: 100%;
+    }
+
+    .infos {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 500px) {
+    .main h1 {
+        font-size: 2.5rem !important;
+    }
+}
