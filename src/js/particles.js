@@ -55,5 +55,3 @@ const create_particles = (class_name, amount) => {
         svg.appendChild(rect);
     }
 }
-
-create_particles(".pixel_particles", 250)

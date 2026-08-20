@@ -6,8 +6,9 @@
     <title>cherries.works</title>
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/pixels.css">
     <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
-    <script defer src="/js/particles.js"></script>
+    <script src="/js/particles.js"></script>
 </head>
 <body>
     <#!- include("./src/templates/header.html") #>
@@ -25,6 +26,9 @@
             <p>
                 Tools that just simply, work.
             </p>
+            <button class="solutions_button" onclick="window.location.href='/solutions.html'">
+                View our Solutions
+            </button>
         </div>
         <div class="secondary">
             <img src="/assets/bg.png" alt="">
@@ -150,5 +154,9 @@
     </div>
 
     <#!- include("./src/templates/footer.html") #>
+
+    <script defer>
+        create_particles(".pixel_particles", 250)
+    </script>
 </body>
 </html>

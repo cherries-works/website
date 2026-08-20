@@ -6,12 +6,16 @@
     <title>cherries.works</title>
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/solutions.css">
+    <link rel="stylesheet" href="/styles/pixels.css">
     <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    <script src="/js/particles.js"></script>
 </head>
 <body>
     <#!- include("./src/templates/header.html") #>
 
     <div class="solutions">
+        <svg class="pixel_particles">
+        </svg>
         <div class="main">
             <h1>
                 <span class="main_text">cherries</span>
@@ -94,6 +98,7 @@
             By using our tools, for free no strings attached, you
             can help us improve day-by-day.
             <br>
+            <br>
             We are still starting small, learning everyday, and
             fixing bugs. With YOUR help, issues can be detected
             faster, new features can be added quicker, and problems
@@ -102,5 +107,9 @@
     </div>
 
     <#!- include("./src/templates/footer.html") #>
+
+    <script defer>
+        create_particles(".pixel_particles", 250)
+    </script>
 </body>
 </html>

@@ -51,37 +51,6 @@ body {
     height: 90dvh;
 }
 
-.hero .pixel_particles {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-
-.pixel {
-    transform-box: fill-box;
-    transform-origin: center;
-    animation: pixelFloat 4s ease-in-out infinite;
-}
-
-@keyframes pixelFloat {
-    0% {
-        opacity: 0.25;
-        transform: translate(0, 0);
-    }
-
-    50% {
-        opacity: 0.8;
-        transform: translate(4px, -6px);
-    }
-
-    100% {
-        opacity: 0.25;
-        transform: translate(0, 0);
-    }
-}
-
 .hero .main {
     display: flex;
     flex-direction: column;
@@ -153,6 +122,23 @@ body {
     position: absolute;
     top: 0;
     left: 50%;
+}
+
+.hero .solutions_button {
+    position: relative;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    background-color: var(--red);
+    font-size: 1.2rem;
+    border: 3px dashed var(--white);
+    color: 3px 3px var(--dark-gray);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.hero .solutions_button:hover {
+    filter: brightness(.8);
+    border-radius: 1rem;
 }
 
 .projects::before {
