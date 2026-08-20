@@ -334,7 +334,7 @@ body {
 
 .vision h1,
 .philosophy h1 {
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 .vision p,
@@ -348,12 +348,13 @@ body {
 
 @media(max-width: 700px) {
     .main h1 {
-        font-size: 4rem !important;
+        font-size: 5rem !important;
     }
 
     .hero {
         flex-direction: column;
         width: 100% !important;
+        height: 50dvh !important;
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
@@ -396,6 +397,6 @@ body {
 
 @media(max-width: 500px) {
     .main h1 {
-        font-size: 2.5rem !important;
+        font-size: 3.5rem !important;
     }
 }

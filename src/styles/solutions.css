@@ -200,22 +200,32 @@
         font-size: 4rem !important;
     }
 
-    .hero {
+    .solutions {
         flex-direction: column;
         width: 100% !important;
         padding-left: 0 !important;
         padding-right: 0 !important;
+        gap: 1rem;
     }
 
-    .hero .main {
-        padding-top: 3rem;
+    .solutions .main {
+        padding: 2rem;
     }
 
-    .hero .secondary {
-        position: relative;
-        padding-top: 0;
-        width: calc(100% - 3rem * 2);
-        height: calc(100% - 3rem * 2);
+    .solutions .main h1 {
+        align-items: start;
+    }
+
+    .solutions .main h1 .main_text {
+        font-size: 4rem;
+    }
+
+    .solutions .main h1 .emphasis {
+        font-size: 6rem;
+    }
+
+    .solutions .secondary {
+        padding: 2rem;
     }
 
     .hero .secondary img {
@@ -225,12 +235,12 @@
         bottom: 0;
     }
 
-    .projects .project {
+    .projects {
         flex-direction: column;
     }
 
-    .projects img {
-        display: none;
+    .projects .project {
+        flex-direction: column;
     }
 
     .vision p,
