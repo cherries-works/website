@@ -35,11 +35,9 @@ body {
 
 .hero {
     position: relative;
-    background-color: var(--white);
-    border-top-left-radius: 10%;
-    border-bottom-left-radius: 50%;
-    border-top-right-radius: 30%;
-    border-bottom-right-radius: 100%;
+    background: linear-gradient(180deg, var(--white), #ccc);
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 10%;
     display: flex;
     flex-direction: row;
     align-items: start;
@@ -75,7 +73,9 @@ body {
     width: 75%;
     font-size: 1.5rem;
     color: var(--dark-gray);
+    opacity: .7;
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .hero .main .buttons {
@@ -120,8 +120,10 @@ body {
 
 .hero .secondary img {
     position: absolute;
-    top: 0;
-    left: 50%;
+    right: 0;
+    width: 50%;
+
+    filter: drop-shadow(0 0 80px #00000052);
 }
 
 .hero .solutions_button {
@@ -343,6 +345,10 @@ body {
         height: 50dvh !important;
         padding-left: 0 !important;
         padding-right: 0 !important;
+    }
+
+    .hero img {
+        display: none;
     }
 
     .hero .main {
