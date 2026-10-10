@@ -27,12 +27,6 @@
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://cherries.works/project/deploy</loc>
-       <lastmod>2026-07-15T18:24:43+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
        <loc>https://cherries.works/blogs</loc>
        <lastmod>2026-07-15T18:24:43+00:00</lastmod>
        <changefreq>daily</changefreq>
