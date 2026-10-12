@@ -161,9 +161,12 @@ int copyFile(char src[], char dest[]) {
 char *STYLES_SRC_DIR = "./src/styles";
 char *ASSETS_SRC_DIR = "./src/assets";
 char *JS_SRC_DIR = "./src/js";
+char *INSTALL_SRC_DIR = "./src/install";
+
 char *STYLES_DIST_DIR = "./dist/styles";
 char *ASSETS_DIST_DIR = "./dist/assets";
 char *JS_DIST_DIR = "./dist/js";
+char *INSTALL_DIST_DIR = "./dist/install";
 
 char *ROBOTS_FILE = "./src/robots.txt";
 char *SITEMAP_FILE = "./src/sitemap.xml";
@@ -223,4 +226,5 @@ int main() {
     copyStatic(STYLES_SRC_DIR, STYLES_DIST_DIR);
     copyStatic(ASSETS_SRC_DIR, ASSETS_DIST_DIR);
     copyStatic(JS_SRC_DIR, JS_DIST_DIR);
+    copyStatic(INSTALL_SRC_DIR, INSTALL_DIST_DIR);
 }
