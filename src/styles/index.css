@@ -1,22 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Fredoka:wght@300..700&display=swap');
 
-html {
-    --dark: #a41e32;
-    --red: #ff183e;
-    --bg: #c23838;
-    --gray: #A29C9B;
-    --dark-gray: #202020;
-    --white: #f1f1f1;
-}
-
 body {
     margin: 0;
-    background-color: var(--white);
+    background-color: var(--dark-gray);
     overflow-x: hidden;
 }
 
 * {
-    font-family: "Fredoka";
+    font-family: "Space Grotesk";
     font-weight: normal;
     margin: 0;
 }
@@ -35,15 +26,11 @@ body {
 
 .hero {
     position: relative;
-    background: linear-gradient(180deg, var(--white), #ccc);
-    border-bottom-left-radius: 20%;
-    border-bottom-right-radius: 10%;
+    background-color: var(--dark-gray);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: start;
-    justify-content: start;
-    padding: 2rem;
-    padding-top: 3rem;
+    justify-content: space-between;
     box-sizing: border-box;
     outline: 3px dashed var(--white);
     height: 90dvh;
@@ -52,8 +39,8 @@ body {
 .hero .main {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: start;
+    align-items: center;
+    justify-content: center;
     padding: 5%;
     padding-left: 2rem;
     padding-top: 10rem;
@@ -63,67 +50,127 @@ body {
     z-index: 1;
 }
 
+.hero .main img {
+    width: 10rem;
+}
+
 .hero .main h1 {
-    font-size: 6rem;
-    color: var(--dark-gray);
+    font-size: 4rem;
     line-height: 90%;
+    text-align: center;
+    color: var(--red);
 }
 
-.hero .main p {
-    width: 75%;
-    font-size: 1.5rem;
-    color: var(--dark-gray);
-    opacity: .7;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+.hero .main h1 .cherries-works {
+    font-family: "Pixelify Sans";
+    color: var(--green);
 }
 
-.hero .main .buttons {
+.hero .buttons {
+    position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
     width: 100%;
-    margin: 1rem 0;
+    height: max-content;
 }
 
-.hero .main .buttons a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+.hero .buttons .button {
+    position: relative;
+    background-color: var(--red);
+    padding: .5rem 1rem;
+    font-size: 1.3rem;
+    box-shadow: 5px 5px var(--accent);
+    cursor: pointer;
+    transition: .3s;
+}
 
-    width: 30%;
-    padding: 1.5rem 2rem;
+.hero .buttons .button:hover {
+    box-shadow: 0 0 var(--accent);
+    color: white;
+    background-color: transparent;
+    border: 1px solid var(--gray);
     border-radius: 5px;
-    box-sizing: border-box;
-    background-color: var(--dark-gray);
-    color: var(--white);
-    text-decoration: none;
-    font-size: 1.5rem;
+    filter: drop-shadow(0 0 10px white);
 }
 
-.hero .main .buttons .github {
-    background-color: var(--white);
-    color: black;
+.hero .bottom {
+    position: relative;
+    width: 100%;
+    height: 20dvh;
 }
 
-.hero .main .buttons .github img {
-    height: 2rem;
-    aspect-ratio: 1/1;
-}
-
-.hero .secondary {
-    padding: 3rem;
-}
-
-.hero .secondary img {
+.hero .bottom .block_1 {
     position: absolute;
-    right: 0;
-    width: 50%;
+    bottom: 0;
+    height: 100%;
+    width: 30%;
+    background-color: var(--red);
+}
 
-    filter: drop-shadow(0 0 80px #00000052);
+.hero .bottom .block_1::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 30%;
+    background-color: color-mix(in srgb, var(--red) 78%, black);
+}
+
+.hero .bottom .block_1::after {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: 10%;
+    background-color: color-mix(in srgb, var(--red) 88%, white);
+}
+
+.hero .bottom .block_1 img {
+    position: absolute;
+    top: 0;
+    right: 30%;
+    transform: translateY(-80%);
+    width: 10rem;
+    filter: drop-shadow(5px 5px 0px #10101055);
+}
+
+.hero .bottom .block_2 {
+    position: absolute;
+    height: 50%;
+    width: 20%;
+    background-color: var(--yellow);
+    right: 0;
+    bottom: 0;
+}
+
+.hero .bottom .block_2 img {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    transform: translateY(-75%);
+    width: 15rem;
+    filter: drop-shadow(5px 5px 0px #10101055);
+}
+
+.hero .bottom .block_3 {
+    position: absolute;
+    height: 150%;
+    width: 10%;
+    border-top-left-radius: 1rem;
+    background-color: var(--orange);
+    right: 0;
+    bottom: 0;
+}
+
+.hero .bottom .block_4 {
+    position: absolute;
+    height: 200%;
+    width: 20%;
+    border-top-right-radius: 2rem;
+    background-color: var(--accent);
+    left: 0;
+    bottom: 0;
 }
 
 .hero .solutions_button {
@@ -160,30 +207,48 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 2rem 15%;
-    padding-top: 15rem;
     padding-bottom: 10rem;
-    padding-right: 5%;
 
-    border-bottom-right-radius: 5%;
-    border-bottom-left-radius: 10%;
-    
-    background-color: var(--red);
+    background-color: var(--dark-gray);
     color: var(--white);
-    outline: 3px dashed var(--red);
+    outline: 1px solid var(--gray);
+}
+
+.projects .project_main_title_wrapper {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--gray);
+}
+
+.projects .project_main_title {
+    font-size: 5rem;
+    width: fit-content;
+    border-right: 1px solid var(--gray);
+    padding: 2rem;
+}
+
+.projects .project_main_description {
+    font-size: 1.2rem;
+    width: fit-content;
+    padding: 2rem;
+    border-top: 1px solid var(--gray);
+    border-right: 1px solid var(--gray);
 }
 
 .projects .project {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 2rem;
+    padding-left: 15%;
+    padding-right: 5%;
     gap: 1rem;
 }
 
 .projects .project > img {
     width: 60%;
-    border-radius: 1rem;
-    border: 2px dashed red;
+    border: 1px solid var(--red);
+    box-shadow: 5px 5px 0 var(--red);
 }
 
 .projects .project .project_data .project_title {
@@ -200,11 +265,15 @@ body {
 
 .projects .project .project_data .project_title h1 {
     font-size: 3rem;
+    color: black;
+    background-color: var(--yellow);
+    width: fit-content;
+    box-shadow: 5px 5px 0 var(--orange);
 }
 
 .projects .project .project_data .project_title p {
     font-size: 1.2rem;
-    color: var(--dark-gray);
+    color: var(--white);
 }
 
 .projects .project .project_data .project_information {
@@ -239,34 +308,48 @@ body {
     gap: 1rem;
 
     width: 100%;
-    padding: 1.5rem 2rem;
-    border-radius: 5px;
+    padding: 1.5rem 1rem;
     box-sizing: border-box;
-    background-color: var(--dark);
-    color: var(--white);
+    background-color: var(--red);
+    box-shadow: 5px 5px 0 var(--orange);
+    color: black;
     text-decoration: none;
     font-size: 1.3rem;
     align-items: center;
+    transition: .3s;
+    border: 1px solid var(--red);
 }
 
 .projects .project .project_data .project_information .buttons .github {
     background-color: var(--white);
     color: black;
+    box-shadow: 5px 5px 0 var(--gray);
+    border: 1px solid var(--white);
+}
+
+.projects .project .project_data .project_information .buttons a:hover {
+    box-shadow: 5px 5px var(--dark-gray);
+    color: white;
+    background-color: transparent;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
 }
 
 .projects .project .project_data .project_information .buttons .github img {
     height: 2rem;
     width: 2rem;
     aspect-ratio: 1/1;
+    transition: .3s;
+}
+
+.projects .project .project_data .project_information .buttons .github:hover img {
+    filter: invert(1);
 }
 
 .infos {
     position: relative;
     display: flex;
     gap: 1rem;
-    padding: 4rem 10%;
-    padding-bottom: 7rem;
-    margin-bottom: 3rem;
 }
 
 .infos .info {
@@ -274,67 +357,90 @@ body {
     flex-direction: column;
     gap: 1rem;
     color: var(--dark-gray);
-    padding: 0 2rem;
+    padding: 2rem 4rem;
+    padding-bottom: 5rem;
+    width: 100%;
+}
+
+.infos .info:not(:last-child) {
+    border-right: 1px solid var(--gray);
+}
+
+.infos .info h1 {
+    font-size: 2rem;
+    color: white;
 }
 
 .infos .info p {
     color: gray;
 }
 
-
-.vision::before {
-    position: absolute;
-    content: '';
-    background-color: var(--white);
-    width: 100%;
-    height: 100%;
-    margin: unset;
-    top: 0;
-    left: 0;
-    z-index: -1;
+.vision,
+.future,
+.philosophy {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+    background-color: var(--orange);
 }
 
 .vision,
 .philosophy {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 4rem 10%;
-    padding-bottom: 7rem;
-    border-top-right-radius: 10%;
-    background-color: var(--red);
+    border-top: 1px solid var(--dark-gray);
 }
 
-.vision {
-    outline: 3px dashed var(--red);
+.vision .vision_wrapper,
+.future .future_wrapper,
+.philosophy .philosophy_wrapper {
+    width: 50%;
+    padding: 2rem 5rem;
+    padding-bottom: 10rem;
+}
+
+.vision img,
+.future img,
+.philosophy img {
+    width: 30%;
+    filter: drop-shadow(1rem 1rem 0 #00000050);
 }
 
 .philosophy {
-    align-items: end;
-    background-color: var(--white);
+    background-color: var(--dark-gray);
+}
+
+.future {
+    background-color: var(--yellow);
 }
 
 .philosophy * {
     text-align: end;
-    color: var(--dark-gray);
+    color: var(--white);
 }
 
 .vision h1,
+.future h1,
 .philosophy h1 {
     font-size: 4rem;
 }
 
 .vision p,
+.future p,
 .philosophy p {
     margin-left: 1rem;
     margin-right: 1rem;
     font-size: 1.3rem;
-    width: 30%;
+    width: 100%;
 }
 
 
 @media(max-width: 700px) {
+    :root {
+        font-size: 12px;
+    }
+
     .main h1 {
         font-size: 5rem !important;
     }
@@ -342,7 +448,8 @@ body {
     .hero {
         flex-direction: column;
         width: 100% !important;
-        height: 50dvh !important;
+        height: 30dvh !important;
+        padding-bottom: 2rem;
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
@@ -369,6 +476,10 @@ body {
         bottom: 0;
     }
 
+    .projects .project_main_title {
+        font-size: 2rem !important;
+    }
+
     .projects .project {
         flex-direction: column;
     }
@@ -377,18 +488,54 @@ body {
         display: none;
     }
 
-    .vision p,
-    .philosophy p {
-        width: 100%;
+    .vision img,
+    .philosophy img,
+    .future img {
+        display: none;
+    }
+
+
+    .vision_wrapper,
+    .philosophy_wrapper,
+    .future_wrapper {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        width: 90% !important;
+    }
+
+    .vision_wrapper p,
+    .philosophy_wrapper p,
+    .future_wrapper p {
+        padding: 0 1rem;
+        width: calc(100% - 4rem) !important;
     }
 
     .infos {
         flex-direction: column;
+    }
+
+    .infos .info {
+        padding: 1rem !important;
+        width: calc(100% - 2rem);
+    }
+
+    .bottom {
+        display: none;
     }
 }
 
 @media(max-width: 500px) {
     .main h1 {
         font-size: 3.5rem !important;
+    }
+}
+
+@media(max-width: 300px) {
+    :root {
+        font-size: 11px;
+    }
+
+    .main h1 {
+        font-size: 2.5rem !important;
     }
 }

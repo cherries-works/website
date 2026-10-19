@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 18" width="128" height="144" shape-rendering="crispEdges">
+  <style>
+    .cherry {
+      transform-box: fill-box;
+      transform-origin: 50% 100%;
+      animation: wobble 0.8s steps(1) infinite;
+    }
+    @keyframes wobble {
+      0%   { transform: rotate(-10deg); }
+      25%  { transform: rotate(0deg); }
+      50%  { transform: rotate(10deg); }
+      75%  { transform: rotate(0deg); }
+    }
+    .leafA, .leafB { animation: swap 0.8s steps(1) infinite; }
+    .leafB { animation-delay: 0.4s; }
+    @keyframes swap {
+      0%, 49.9%  { opacity: 1; }
+      50%, 100%  { opacity: 0; }
+    }
+  </style>
+  <g class="cherry">
+    <!-- stem -->
+    <rect x="7" y="3" width="1" height="3" fill="#7a4a2b"/>
+    <rect x="8" y="2" width="1" height="2" fill="#7a4a2b"/>
+    <!-- leaf pose A -->
+    <g class="leafA">
+      <rect x="9" y="2" width="4" height="2" fill="#3f9b42"/>
+      <rect x="13" y="3" width="2" height="1" fill="#2c6e30"/>
+      <rect x="10" y="2" width="1" height="1" fill="#66c46a"/>
+    </g>
+    <!-- leaf pose B (flutter) -->
+    <g class="leafB">
+      <rect x="9" y="3" width="4" height="1" fill="#3f9b42"/>
+      <rect x="10" y="1" width="3" height="1" fill="#66c46a"/>
+      <rect x="13" y="2" width="1" height="2" fill="#2c6e30"/>
+    </g>
+    <!-- body -->
+    <rect x="5" y="5" width="6" height="1" fill="#d1332e"/>
+    <rect x="4" y="6" width="8" height="1" fill="#d1332e"/>
+    <rect x="3" y="7" width="10" height="1" fill="#d1332e"/>
+    <rect x="3" y="8" width="10" height="2" fill="#d1332e"/>
+    <rect x="3" y="10" width="10" height="2" fill="#d1332e"/>
+    <rect x="4" y="12" width="8" height="2" fill="#d1332e"/>
+    <rect x="5" y="14" width="6" height="1" fill="#d1332e"/>
+    <!-- shading -->
+    <rect x="10" y="9" width="2" height="3" fill="#8f1f22"/>
+    <rect x="9" y="11" width="2" height="2" fill="#8f1f22"/>
+    <!-- highlight -->
+    <rect x="5" y="6" width="1" height="1" fill="#f27a6a"/>
+    <rect x="6" y="7" width="1" height="1" fill="#f27a6a"/>
+    <rect x="5" y="7" width="1" height="1" fill="#ffffff" opacity="0.9"/>
+  </g>
+</svg>

@@ -1,12 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Fredoka:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Pixelify+Sans:wght@400..700&family=Space+Grotesk:wght@300..700&display=swap');
 
 html {
-    --dark: #a41e32;
-    --red: #ff183e;
-    --bg: #c23838;
-    --gray: #A29C9B;
-    --dark-gray: #202020;
-    --white: #f1f1f1;
+    --dark: #7a1f2e;
+    --red: #d21531;
+    --green: #54d215;
+    --accent: #f2550c;
+    --orange: #f28f0e;
+    --yellow: #efd342;
+    --bg: #b04141;
+    --gray: #3a3a3a;
+    --dark-gray: #141414;
+    --white: #f4f1ea;
 }
 
 body {
@@ -16,13 +20,13 @@ body {
 }
 
 * {
-    font-family: "Fredoka";
+    font-family: "Space Grotesk";
     font-weight: normal;
     margin: 0;
 }
 
 .emphasis {
     position: relative;
-    color: var(--red);
-    font-family: "Bitcount Grid Single", sans-serif;
+    color: var(--accent);
+    text-decoration: underline;
 }

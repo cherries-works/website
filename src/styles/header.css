@@ -2,12 +2,12 @@
     position: sticky;
     top: 0;
     z-index: 3;
-    width: calc(100% - 3rem);
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem;
-    background-color: var(--white);
-    border-bottom: 3px dashed red;
+    background-color: var(--dark-gray);
+    border-bottom: 1px solid var(--gray);
+    box-shadow: 0 1rem 0 var(--dark-gray);
 }
 
 .header .title {
@@ -15,35 +15,51 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    font-size: .5rem;
     width: fit-content;
     text-decoration: none;
 }
 
 .header .title img {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 .header .title p {
-    font-family: "Bitcount Grid Single", sans-serif;
-    font-size: 2rem;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1.3rem;
     margin: 0;
-    color: var(--dark);
+    color: white;
     text-decoration: none;
+    padding-right: 1rem;
+    border-right: 1px solid var(--gray);
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .header .navigation {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
 }
 
 .header .navigation a {
-    font-family: "Bitcount Grid Single", sans-serif;
-    font-size: 1.8rem;
-    color: black;
+    font-size: 1.1rem;
+    color: white;
     transition: .3s;
+    height: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    border-left: 1px solid var(--gray);
+}
+
+.header .navigation a > img {
+    width: 2rem;
+    filter: invert(1);
 }
 
 .header .navigation a:hover {
@@ -57,11 +73,32 @@
         gap: 1rem;
     }
 
+    .header .title {
+        border-bottom: 1px solid var(--gray);
+        width: 100%;
+        border-right: 0 !important;
+    }
+
+    .header .title p {
+        border-right: 0 !important;
+    }
+
     .navigation {
-        flex-direction: column;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        padding: 5px;
+        gap: 5px;
     }
 
     .navigation a {
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-left: 0 !important;
+        padding: 1rem 5px;
+        width: 100%;
+        text-align: center !important;
+        border-bottom: 1px solid var(--gray);
     }
 }

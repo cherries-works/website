@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="256" height="256" shape-rendering="crispEdges">
+  <style>
+    .leaf { animation: fall 3.2s steps(10) infinite; }
+    .l2 { animation-delay: 0.8s; }
+    .l3 { animation-delay: 1.6s; }
+    .l4 { animation-delay: 2.4s; }
+    @keyframes fall {
+      0%   { transform: translate(0, -8px); opacity: 0; }
+      10%  { opacity: 1; }
+      90%  { opacity: 1; }
+      100% { transform: translate(3px, 40px); opacity: 0; }
+    }
+  </style>
+
+  <g class="leaf">
+    <rect x="4" y="0" width="3" height="1" fill="#3f9b42"/>
+    <rect x="5" y="1" width="1" height="1" fill="#2c6e30"/>
+    <rect x="5" y="0" width="1" height="1" fill="#66c46a"/>
+  </g>
+  <g class="leaf l2">
+    <rect x="12" y="0" width="3" height="1" fill="#66c46a"/>
+    <rect x="13" y="1" width="1" height="1" fill="#3f9b42"/>
+    <rect x="12" y="0" width="1" height="1" fill="#3f9b42"/>
+  </g>
+  <g class="leaf l3">
+    <rect x="20" y="0" width="3" height="1" fill="#3f9b42"/>
+    <rect x="21" y="1" width="1" height="1" fill="#2c6e30"/>
+    <rect x="21" y="0" width="1" height="1" fill="#66c46a"/>
+  </g>
+  <g class="leaf l4">
+    <rect x="27" y="0" width="3" height="1" fill="#2c6e30"/>
+    <rect x="28" y="1" width="1" height="1" fill="#3f9b42"/>
+    <rect x="28" y="0" width="1" height="1" fill="#66c46a"/>
+  </g>
+</svg>

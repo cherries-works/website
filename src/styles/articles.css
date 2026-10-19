@@ -3,12 +3,12 @@
     position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    width: calc(100% - 10rem);
-    padding: 5rem;
-    margin: 1rem 5rem;
-    padding-top: 0;
+    width: calc(100%);
+    padding: 10rem;
+    padding-top: 4rem;
     gap: 1rem;
     box-sizing: border-box;
+    background-color: var(--dark-gray);
 }
 
 .news > a,
@@ -22,13 +22,32 @@
     text-decoration: none;
     padding: 2rem;
     box-sizing: border-box;
-    border-radius: 5px;
-    background-color: var(--bg);
+    background-color: var(--red);
+    box-shadow: 5px 5px var(--dark);
+    transition: .3s;
+    border: 1px solid var(--red);
+}
+
+.news > a:hover,
+.blogs > a:hover {
+    box-shadow: none;
+    border: 1px solid var(--gray);
+    background-color: var(--dark-gray);
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    rotate: 2deg;
+    filter: drop-shadow(0 0 1rem #ffffff12);
 }
 
 .news > a > p,
 .blogs > a > p {
     color: var(--dark-gray);
+    transition: .3s;
+}
+
+.news > a:hover > p,
+.blogs > a:hover > p {
+    color: white;
 }
 
 @media (max-width: 700px) {

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="512" height="512" shape-rendering="crispEdges">
+  <!-- background -->
+  <rect width="16" height="16" fill="#1c1626"/>
+
+  <!-- rack frame -->
+  <rect x="2" y="0" width="12" height="16" fill="#3d4450"/>
+  <rect x="3" y="1" width="10" height="15" fill="#1f242e"/>
+  <rect x="2" y="0" width="1" height="16" fill="#525b69"/>
+  <rect x="13" y="0" width="1" height="16" fill="#141821"/>
+
+  <!-- server units (top to bottom) -->
+  <!-- unit 1 -->
+  <rect x="3" y="1" width="10" height="3" fill="#2b3240"/>
+  <rect x="4" y="2" width="1" height="1" fill="#4df08a"/>
+  <rect x="6" y="2" width="1" height="1" fill="#4df08a"/>
+  <rect x="10" y="2" width="2" height="1" fill="#0c0f15"/>
+
+  <!-- unit 2 -->
+  <rect x="3" y="4" width="10" height="3" fill="#2b3240"/>
+  <rect x="4" y="5" width="1" height="1" fill="#4df08a"/>
+  <rect x="6" y="5" width="1" height="1" fill="#f0c14d"/>
+  <rect x="10" y="5" width="2" height="1" fill="#0c0f15"/>
+
+  <!-- unit 3 -->
+  <rect x="3" y="7" width="10" height="3" fill="#2b3240"/>
+  <rect x="4" y="8" width="1" height="1" fill="#4df08a"/>
+  <rect x="6" y="8" width="1" height="1" fill="#4df08a"/>
+  <rect x="10" y="8" width="2" height="1" fill="#0c0f15"/>
+
+  <!-- unit 4 -->
+  <rect x="3" y="10" width="10" height="3" fill="#2b3240"/>
+  <rect x="4" y="11" width="1" height="1" fill="#f05a4d"/>
+  <rect x="6" y="11" width="1" height="1" fill="#4df08a"/>
+  <rect x="10" y="11" width="2" height="1" fill="#0c0f15"/>
+
+  <!-- unit 5: cable management / drawer -->
+  <rect x="3" y="13" width="10" height="3" fill="#232837"/>
+  <rect x="6" y="14" width="4" height="1" fill="#3d4450"/>
+
+  <!-- top highlight -->
+  <rect x="2" y="0" width="12" height="1" fill="#525b69"/>
+</svg>

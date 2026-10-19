@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 10" width="480" height="100" shape-rendering="crispEdges">
+  <style>
+    .ledY { animation: blink 1s steps(1) infinite; }
+    .ledR { animation: blink 0.4s steps(1) infinite; }
+    @keyframes blink {
+      0%, 49%   { opacity: 1; }
+      50%, 100% { opacity: 0.15; }
+    }
+  </style>
+
+  <!-- ===== UNIT 1: healthy (steady green) ===== -->
+  <g id="ok">
+    <rect x="0" y="1" width="14" height="6" fill="#2b3240"/>
+    <rect x="0" y="1" width="14" height="1" fill="#3d4450"/>
+    <rect x="8" y="3" width="4" height="1" fill="#141821"/>
+    <rect x="8" y="5" width="4" height="1" fill="#141821"/>
+    <rect x="2" y="3" width="1" height="1" fill="#4df08a"/>
+    <rect x="2" y="5" width="4" height="1" fill="#141821"/>
+  </g>
+
+  <!-- ===== UNIT 2: degraded (slow yellow blink) ===== -->
+  <g id="warn" transform="translate(17,0)">
+    <rect x="0" y="1" width="14" height="6" fill="#2b3240"/>
+    <rect x="0" y="1" width="14" height="1" fill="#3d4450"/>
+    <rect x="8" y="3" width="4" height="1" fill="#141821"/>
+    <rect x="8" y="5" width="4" height="1" fill="#141821"/>
+    <rect x="2" y="3" width="1" height="1" fill="#f0c14d" class="ledY"/>
+    <rect x="2" y="5" width="4" height="1" fill="#141821"/>
+  </g>
+
+  <!-- ===== UNIT 3: down (fast red blink) ===== -->
+  <g id="down" transform="translate(34,0)">
+    <rect x="0" y="1" width="14" height="6" fill="#2b3240"/>
+    <rect x="0" y="1" width="14" height="1" fill="#3d4450"/>
+    <rect x="8" y="3" width="4" height="1" fill="#141821"/>
+    <rect x="8" y="5" width="4" height="1" fill="#141821"/>
+    <rect x="2" y="3" width="1" height="1" fill="#f05a4d" class="ledR"/>
+    <rect x="2" y="5" width="4" height="1" fill="#141821"/>
+  </g>
+</svg>
