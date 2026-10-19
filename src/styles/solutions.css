@@ -145,6 +145,13 @@
     align-items: center;
 }
 
+.projects .project .project_data .project_information .buttons a:hover {
+    box-shadow: 5px 5px var(--dark-gray);
+    color: white;
+    background-color: transparent;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+}
 
 .vision,
 .philosophy {
