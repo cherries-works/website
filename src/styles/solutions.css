@@ -9,7 +9,6 @@
     align-items: start;
     justify-content: start;
     box-sizing: border-box;
-    outline: 3px dashed var(--dark-gray);
     gap: 5rem;
     border-bottom: 1px solid var(--gray);
 }
