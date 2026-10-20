@@ -99,3 +99,14 @@ footer img {
         display: none;
     }
 }
+
+@media(max-width: 500px) {
+    .philosophy,
+    .vision {
+        padding-top: 2rem !important;
+    }
+
+    footer .links > div {
+        padding: 2rem;
+    }
+}
