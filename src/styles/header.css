@@ -96,9 +96,9 @@
         align-items: center;
         justify-content: center;
         border-left: 0 !important;
-        padding: 1rem 5px;
         width: 100%;
         text-align: center !important;
         border-bottom: 1px solid var(--gray);
+        padding: 0 !important;
     }
 }
