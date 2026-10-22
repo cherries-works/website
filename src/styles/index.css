@@ -81,6 +81,7 @@ body {
     font-size: 1.3rem;
     box-shadow: 5px 5px var(--accent);
     cursor: pointer;
+    border: 1px solid var(--red);
     color: black;
     text-decoration: none;
     transition: .3s;
