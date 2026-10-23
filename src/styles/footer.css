@@ -39,7 +39,9 @@ footer .links > div:nth-child(1) {
 
 footer .links > div:nth-child(2) {
     background-color: var(--dark);
+    color: white;
 }
+
 footer .links > div:nth-child(3) {
     background-color: var(--yellow);
     color: black;
@@ -54,6 +56,11 @@ footer .links > div > a {
     color: var(--dark-gray);
     text-decoration: none;
     font-size: 1.3rem;
+    transition: .3s;
+}
+
+footer .links > div > a:hover {
+    text-shadow: 0 0 1rem white;
 }
 
 footer .title {
