@@ -41,6 +41,10 @@ footer .links > div:nth-child(2) {
     background-color: var(--dark);
 }
 
+footer .links > div:nth-child(2) > a {
+    color: var(--white);
+}
+
 footer .links > div:nth-child(3) {
     background-color: var(--yellow);
     color: black;
