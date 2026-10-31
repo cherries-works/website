@@ -39,7 +39,6 @@ footer .links > div:nth-child(1) {
 
 footer .links > div:nth-child(2) {
     background-color: var(--dark);
-    color: white !important;
 }
 
 footer .links > div:nth-child(3) {
